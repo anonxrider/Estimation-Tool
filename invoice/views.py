@@ -173,6 +173,7 @@ def createInvoice1(request):
         a = float(gstpercentageinfloat) * 100
         b = int(a)
         servicea = form.data["service"]
+# IF CONDITION 
         if servicea == "http://apropack.com/assets/apro-rigs.svg":
             terms1 = form.data["termsandconditionsaprorigs"]
             additionalnotes = form.data["fulldescriptionrigs"]
