@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="386e9238-49fa-4d0a-af3e-9e2b6bba8cb5" name="Changes" comment="admin dashboard modification" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="https_/github.com/anonxrider/Estimation-Tool-.git" />
+      </map>
+    </option>
+    <option name="RECENT_COMMON_BRANCH" value="main" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="e25c6199-562f-49e0-b447-c320d9fb4a22" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="26Z981j4A2nIPD7vZqo1yhvIDca" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/invoice/templates/Backup Code" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="https_/github.com/anonxrider/Estimation-Tool-.git" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\OP PC 03\Downloads\wetransfer_ee_2022-05-11_0710\Django-Invoice-new1\Django-Invoice-new\invoice\templates\Backup Code" />
+      <recent name="$PROJECT_DIR$/invoice/templates/invoice" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/invoice/templates/admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="PythonConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.runserver">
+    <configuration name="main" type="CompoundRunConfigurationType">
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="django-invoicesq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
+      <module name="django-invoicesq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/Desktop/django-invoicesq/django-invoicesq/env/Scripts/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Compound.main" />
+      <item itemvalue="Python.runserver" />
+      <item itemvalue="Python.manage" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="386e9238-49fa-4d0a-af3e-9e2b6bba8cb5" name="Changes" comment="" />
+      <created>1647620087423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647620087423</updated>
+    </task>
+    <task id="LOCAL-00053" summary="adding admin dashboard templates">
+      <created>1652707250042</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1652707250042</updated>
+    </task>
+    <task id="LOCAL-00054" summary="adding admin dashboard templates">
+      <created>1652768269904</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1652768269904</updated>
+    </task>
+    <task id="LOCAL-00055" summary="adding admin dashboard templates">
+      <created>1652768695613</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1652768695613</updated>
+    </task>
+    <task id="LOCAL-00056" summary="auto logout 1 min added settings.py">
+      <created>1652773900336</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1652773900336</updated>
+    </task>
+    <task id="LOCAL-00057" summary="css edit">
+      <created>1652880867773</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1652880867773</updated>
+    </task>
+    <task id="LOCAL-00058" summary="css edit">
+      <created>1652880947763</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1652880947763</updated>
+    </task>
+    <task id="LOCAL-00059" summary="css edit">
+      <created>1652937713123</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1652937713123</updated>
+    </task>
+    <task id="LOCAL-00060" summary="css edit">
+      <created>1652939410626</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1652939410626</updated>
+    </task>
+    <task id="LOCAL-00061" summary="css edit">
+      <created>1652939805017</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1652939805017</updated>
+    </task>
+    <task id="LOCAL-00062" summary="css edit">
+      <created>1652939823235</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1652939823235</updated>
+    </task>
+    <task id="LOCAL-00063" summary="css edit">
+      <created>1652940855439</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1652940855439</updated>
+    </task>
+    <task id="LOCAL-00064" summary="css comment invoice list ok">
+      <created>1652941422173</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1652941422173</updated>
+    </task>
+    <task id="LOCAL-00065" summary="css edit">
+      <created>1652943710244</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1652943710244</updated>
+    </task>
+    <task id="LOCAL-00066" summary="css edit">
+      <created>1652945622373</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1652945622373</updated>
+    </task>
+    <task id="LOCAL-00067" summary="css edit">
+      <created>1652947919896</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1652947919896</updated>
+    </task>
+    <task id="LOCAL-00068" summary="CHECKPOINT 1">
+      <created>1652951413314</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1652951413314</updated>
+    </task>
+    <task id="LOCAL-00069" summary="CHECKPOINT 1">
+      <created>1652954335855</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1652954335855</updated>
+    </task>
+    <task id="LOCAL-00070" summary="CHECKPOINT 2">
+      <created>1652954380127</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1652954380127</updated>
+    </task>
+    <task id="LOCAL-00071" summary="CHECKPOINT 2">
+      <created>1652958995796</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1652958995796</updated>
+    </task>
+    <task id="LOCAL-00072" summary="PYTHON CODE ARRANGEMENT">
+      <created>1652959524439</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1652959524439</updated>
+    </task>
+    <task id="LOCAL-00073" summary="PYTHON CODE ARRANGEMENT">
+      <created>1652960098974</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1652960098974</updated>
+    </task>
+    <task id="LOCAL-00074" summary="TIME SETTINGS NOT COMPLETED">
+      <created>1652966811980</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1652966811980</updated>
+    </task>
+    <task id="LOCAL-00075" summary="TIME SETTINGS COMPLETED">
+      <created>1653023391969</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1653023391969</updated>
+    </task>
+    <task id="LOCAL-00076" summary="TIME SETTINGS COMPLETED">
+      <created>1653023399691</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1653023399691</updated>
+    </task>
+    <task id="LOCAL-00077" summary="log implemented">
+      <created>1653025141712</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1653025141712</updated>
+    </task>
+    <task id="LOCAL-00078" summary="some edits">
+      <created>1653049154264</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1653049154264</updated>
+    </task>
+    <task id="LOCAL-00079" summary="log abc to full-logs">
+      <created>1653049487132</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1653049487132</updated>
+    </task>
+    <task id="LOCAL-00080" summary="log abc to full-logs">
+      <created>1653050526567</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1653050526567</updated>
+    </task>
+    <task id="LOCAL-00081" summary="settings modification">
+      <created>1653050751639</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1653050751639</updated>
+    </task>
+    <task id="LOCAL-00082" summary="admin dashboard modification">
+      <created>1653051327335</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1653051327335</updated>
+    </task>
+    <task id="LOCAL-00083" summary="admin dashboard modification">
+      <created>1653051515138</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1653051515138</updated>
+    </task>
+    <task id="LOCAL-00084" summary="admin dashboard modification">
+      <created>1653052856333</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1653052856333</updated>
+    </task>
+    <task id="LOCAL-00085" summary="admin dashboard modification">
+      <created>1653053226253</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1653053226253</updated>
+    </task>
+    <task id="LOCAL-00086" summary="admin dashboard modification">
+      <created>1653109311116</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1653109311116</updated>
+    </task>
+    <task id="LOCAL-00087" summary="admin dashboard modification">
+      <created>1653110996126</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1653110996127</updated>
+    </task>
+    <task id="LOCAL-00088" summary="admin dashboard modification">
+      <created>1653111332563</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1653111332563</updated>
+    </task>
+    <task id="LOCAL-00089" summary="admin dashboard modification">
+      <created>1653112579699</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1653112579699</updated>
+    </task>
+    <task id="LOCAL-00090" summary="admin dashboard modification">
+      <created>1653113458682</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1653113458682</updated>
+    </task>
+    <task id="LOCAL-00091" summary="admin dashboard modification">
+      <created>1653113566598</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1653113566598</updated>
+    </task>
+    <task id="LOCAL-00092" summary="admin dashboard modification">
+      <created>1653113637896</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1653113637896</updated>
+    </task>
+    <task id="LOCAL-00093" summary="admin dashboard modification">
+      <created>1653113795966</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1653113795966</updated>
+    </task>
+    <task id="LOCAL-00094" summary="admin dashboard modification">
+      <created>1653113878025</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1653113878026</updated>
+    </task>
+    <task id="LOCAL-00095" summary="admin dashboard modification">
+      <created>1653114034267</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1653114034267</updated>
+    </task>
+    <task id="LOCAL-00096" summary="admin dashboard modification">
+      <created>1653114213137</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1653114213137</updated>
+    </task>
+    <task id="LOCAL-00097" summary="admin dashboard modification">
+      <created>1653114891137</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1653114891137</updated>
+    </task>
+    <task id="LOCAL-00098" summary="admin dashboard modification">
+      <created>1653114991195</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1653114991196</updated>
+    </task>
+    <task id="LOCAL-00099" summary="admin dashboard modification">
+      <created>1653115052418</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1653115052418</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Revert &quot;admin dashboard modification&quot;&#10;&#10;This reverts commit 83bc597c">
+      <created>1653115409161</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1653115409161</updated>
+    </task>
+    <task id="LOCAL-00101" summary="admin dashboard modification">
+      <created>1653115611389</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1653115611389</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/https_/github.com/anonxrider/Estimation-Tool-.git" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/django-invoicesq" />
+    </ignored-roots>
+    <MESSAGE value="changes 14 apr 2022 17:20" />
+    <MESSAGE value="changes 14 apr 2022 18.35" />
+    <MESSAGE value="14 APRIL 18.48 TODAY FINAL COMMIT" />
+    <MESSAGE value="18 APRIL 19.08 TODAY FINAL COMMIT hh" />
+    <MESSAGE value="TODAY gst calculation" />
+    <MESSAGE value="TODAY final" />
+    <MESSAGE value="TODAY" />
+    <MESSAGE value="added bleach clean for text input" />
+    <MESSAGE value="added login required" />
+    <MESSAGE value="today" />
+    <MESSAGE value="adding admin dashboard templates" />
+    <MESSAGE value="auto logout 1 min added settings.py" />
+    <MESSAGE value="css comment invoice list ok" />
+    <MESSAGE value="css edit" />
+    <MESSAGE value="CHECKPOINT 1" />
+    <MESSAGE value="CHECKPOINT 2" />
+    <MESSAGE value="PYTHON CODE ARRANGEMENT" />
+    <MESSAGE value="TIME SETTINGS NOT COMPLETED" />
+    <MESSAGE value="TIME SETTINGS COMPLETED" />
+    <MESSAGE value="log implemented" />
+    <MESSAGE value="some edits" />
+    <MESSAGE value="log abc to full-logs" />
+    <MESSAGE value="settings modification" />
+    <MESSAGE value="Revert &quot;admin dashboard modification&quot;&#10;&#10;This reverts commit 83bc597c" />
+    <MESSAGE value="admin dashboard modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin dashboard modification" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>

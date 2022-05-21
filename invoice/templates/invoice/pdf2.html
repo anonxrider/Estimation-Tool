@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>APRO IT Solutions Pvt. Ltd. - ESTIMATE #{{invoice_id}}{{customer}}</title>
+    {% load humanize %}
+</head>
+
+<body onload="myFunction()" style="margin-left: auto; margin-right: auto;">
+
+
+
+<style>
+
+
+@page {
+	size: a4 portrait;
+	@frame header_data {
+		-pdf-frame-content: header_content;
+		left: 60pt;
+		width: 512pt;
+		top: 60px;
+		height: 50pt;
+	}
+	@frame footer_frame {
+		-pdf-frame-content: footer_content;
+		left: 60pt;
+		width: 512pt;
+		top: 772pt;
+		height: 30pt
+	}
+	@frame content_frame {
+		left: 50pt;
+		width: 512pt;
+		top: 90pt;
+		height: 620pt;
+	}
+	@frame img
+	{
+        height:40px;
+        width:auto;
+        display:block;
+        float:right;
+        padding-right:15px;
+        text-align:left;
+        background-color:red;
+    }
+
+}
+
+
+img {
+        height:40px;
+        width:auto;
+        display:block;
+        float:right;
+        text-align:left;
+        background-color:yellow;
+}
+
+
+
+</style>
+
+
+
+
+<!-- BEGIN: Sticky Header -->
+<div id="header_content">
+     <img src="https://svgshare.com/i/fjk.svg"/>
+</div>
+
+<!-- END: Sticky Header -->
+<!-- BEGIN: Page Content -->
+    <div id="container">
+        <p style="text-align: center; font-weight: bold; font-size: 33px; font-family: Helvetica, Sans-Serif; margin-bottom: -36px;">
+            ESTIMATE</p>
+        <p style=" font-family: Helvetica, Sans-Serif;">Date: {{date|date:"d-m-Y"}} </p><br/>
+        <p style=" font-family: Helvetica, Sans-Serif; font-size: 20px;"><b>Client Name:</b> {{customer}}</p>
+        <p style=" font-family: Helvetica, Sans-Serif; margin-top: -14px; font-size: 20px;"><b>Service Type:</b>
+            {{service_type}} - {{service_message}}</p>
+        <p style=" font-family: Helvetica, Sans-Serif; margin-top: 26px;">{{bill_title}}</p>
+        <br/>
+
+        <table style="page-break-inside:auto;">
+            <thead style="    display:table-header-group">
+            <tr>
+                <th style="font-weight:bold;padding:10px"><b>#</b></th>
+                <th style="padding:10px;font-weight:bold;">Description</th>
+                <th style="font-weight:bold;padding:10px">Qty</th>
+                <th style="font-weight:bold;padding:10px">Rate</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in lineitem %}
+            <tr>
+                <td style="text-align:center;    width: 57px;">{{forloop.counter}}</td>
+                <td>
+                    <div><strong>{{item.service}}</strong></div>
+                    <br/>
+                    <div style="    margin-top: -30px;width: 550px;">{{item.description|linebreaks}}</div>
+                </td>
+                <td style="text-align:center;  width: 95px; padding:19px">{{item.quantity}}</td>
+                <td style="text-align:center;font-weight:bold;">₹ {{item.rate|intcomma}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot style="position:static;">
+
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align:left;width:50%;"><strong>Total without GST</strong</td>
+                <td style="text-align:right;width:50%;">
+                    <div style="margin-right: 76px;font-weight:bold;">₹ {{invoice_total|intcomma}}</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align:left;width:50%;"><strong>GST {{gstpercentage}}%</strong</td>
+                <td style="text-align:right;width:50%;">
+                    <div style="margin-right: 76px;font-weight:bold;">₹ {{gsttotal|intcomma}}</div>
+                </td>
+
+
+            </tr>
+            <tr style="background-color: #f3f5f5">
+                <td></td>
+                <td></td>
+                <td style="text-align:left;width:50%;"><strong>Total</strong</td>
+                <td style="text-align:right;width:50%;">
+                    <div style="margin-right: 76px;font-weight:bold;">₹ {{subtotal|intcomma}}</div>
+                </td>
+
+
+            </tr>
+
+            </tfoot>
+        </table>
+
+
+        <!-- Edited by APRO IT Solutions Pvt. Ltd. -->
+
+
+        <!-- Edited by APRO IT Solutions Pvt. Ltd. -->
+
+
+        <h1 style=" font-size: 16px; font-weight: 400; color: #0b3150; font-family: Helvetica, Sans-Serif; margin-top: 45px;">
+            {{fulldescription|linebreaks}}</h1><br/>
+        <div style="color: #0b3150; font-family: Helvetica, Sans-Serif; font-weight:bold;">Terms and Conditions:</div>
+        <h1 style=" font-size: 16px; font-weight: 400; color: #0b3150; font-family: Helvetica, Sans-Serif; margin-top: -12px;">
+            {{termsandconditions|linebreaks}}</h1><br/>
+
+    </div>
+
+    <div id="footer_content">
+       <img id="footimag" src="https://svgshare.com/i/fkr.svg" />    </div>
+
+</body>
+</html>

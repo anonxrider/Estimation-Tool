@@ -1,0 +1,437 @@
+{% extends 'invoice/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<head>
+    <style>
+   button:hover{
+     background-color: #6b6e70;
+   }
+    button{
+      border-radius: 10px;
+      border-color: #6b6e70;
+
+    }
+    .filter_container{
+      padding-top:15px;
+      display: flex;
+      flex-wrap: wrap;
+
+
+    }
+    .filter_container_inner{
+
+    }
+    .fas.fa-arrow-circle-right {
+  display: none;
+}
+    button{
+      background-color: #343a40;
+      color: white;
+    }
+    /* dropdown menu css */
+    .dropbtn {
+  background-color: #007bff;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  width:209%;
+  border-radius: 2%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #343a40;
+  min-width: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width:200%;
+
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(107, 106, 106);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #007bff;}
+    /* end dropdown menu css */
+
+    .aside{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .aside_two{
+      padding-bottom: 30px;
+    }
+    input{
+      width:80%;
+      color: rgb(255, 255, 255);
+      background-color: #343a40;
+    }
+    .aside_one{
+      padding-left: 10px;
+      padding-right: 10px;
+
+    }
+
+
+    </style>
+    <link rel="stylesheet" href="{{css_link_a}}">
+    <link rel="stylesheet" href="{{css_link_b}}">
+    <link rel="stylesheet" href="{{css_link_c}}">
+    <link rel="stylesheet" href="{{css_link_d}}">
+</head>
+
+
+
+
+
+
+
+
+
+<!-- <div class="columns is-centered has-text-centered">
+    <div class="column is-half">
+        <div class="card has-background-white-ter">
+            <h1 class="title is-3"></h1>
+        </div>
+    </div>
+
+
+</div> -->
+
+
+<!-- side nav -->
+
+<div class="sidenav">
+    <!-- logo section -->
+    <div class="aside">
+        <div class="aside_one">
+            <img src="{{image_src_a}}" style="border-radius: 50%; height: 40px; width: 40px;">
+        </div>
+        <div class="aside_two">
+            <h5 style="color: white; padding-left: 10px;">{{main_title}}</h5>
+        </div>
+        <div class="aside_one">
+            <div class="dropdown" style="padding-bottom: 15px;">
+                <button class="dropbtn">{{title_a}}</button>
+                <div class="dropdown-content">
+                    <a href="#" style="color: white;">{{title_a}}</a>
+                    <a href="#" style="color: white;">{{title_b}}</a>
+                    <a href="#" style="color: white;">{{title_c}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end logo section -->
+
+
+    <!-- dasboard dropdwn -->
+
+    <!-- end dasbord dropdwn -->
+
+
+    <!-- search bar -->
+
+    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px; padding-left: 10px;">
+        <input type="text" placeholder="Search.." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+
+    <!-- end search bar -->
+
+
+    <!-- filter section -->
+
+    <div class="filter_container">
+        <div class="filter_container_inner">
+            <div style="padding:10px;">
+                <button style="background-color:#343a40 ; width: 150px;">
+                    <a href="{% url 'invoice:invoice-list-date-negative' %}" class="has-text-white" style="font-size: 11px;
+font-weight: bold;"><b style="color: white;">{{title_d}}</b></a>
+                </button>
+            </div>
+        </div>
+        <div class="filter_container_inner">
+            <div style="padding:10px;">
+                <button style="background-color:#343a40 ; width: 150px;">
+                    <a href="{% url 'invoice:invoice-list-date-positive' %}" class="has-text-white" style="font-size: 11px;
+font-weight: bold;"><b style="color: white;">{{title_e}}</b></a>
+                </button>
+            </div>
+        </div>
+        <div class="filter_container_inner">
+            <div style="padding:10px;">
+                <button style="background-color:#343a40 ; width: 150px;">
+                    <a href="/admin" class="has-text-white" style="font-size: 11px;
+font-weight: bold;"><b style="color: white;">{{title_f}}</b></a>
+                </button>
+            </div>
+        </div>
+        <div class="filter_container_inner">
+            <div style="padding:10px;">
+                <button style="background-color:#343a40 ; width: 150px;">
+                    <a href="{% url 'invoice:export' %}" class="has-text-white" style="font-size: 11px;
+font-weight: bold;"><b style="color: white;">{{title_g}}</b></a>
+                </button>
+            </div>
+        </div>
+        <div class="filter_container_inner">
+            <div style="padding:10px;">
+                <button style="background-color:#343a40; width: 150px;">
+                    <a href="{% url 'invoice:export' %}" class="has-text-white" style="font-size: 11px;
+font-weight: bold;"><b style="color: white;">{{title_h}}</b></a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- end filter section -->
+
+
+</div>
+
+<!-- end side nav -->
+
+
+<!-- box section -->
+<header>
+
+
+    <div class="flex-container">
+
+
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>85+</h3>
+
+                    <a href="{% url 'invoice:invoice-create' %}"><b>{{title_i}}</b></a>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-plus"></i>
+                </div>
+                <a href="#" class="small-box-footer">{{title_j}}<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h3>{{ total_count }}</h3>
+
+                    <a href="{% url 'invoice:invoice-list' %}"><b>{{title_k}}</b></a>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">{{title_j}}<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>44</h3>
+
+                    <a href="{% url 'invoice:logout' %}"> <b>{{title_l}}</b></a>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">{{title_j}}<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+
+            <div class="small-box bg-danger">
+                <div class="inner">
+                    <h3>65</h3>
+
+                    <a href="#" class="has-text-white"><b>{{title_m}}</b></a>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer">{{title_j}}<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- end box section -->
+
+<!-- <h1 style="text-align:center;"><b>Estimate Generator</b></h1>  <br>&nbsp;
+<div style="text-align: center;"><h3 id="clock"></h3></div> -->
+
+
+<div style="text-align:center;">
+
+
+    <form action="{% url 'invoice:invoice-list' %}" method="post">
+        {% csrf_token %}
+
+        <div>
+
+            <header class="card-header">
+                <p class="card-header-title">
+                    <br>&nbsp;
+
+                    <!-- <div style="padding:10px;"><button  class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                         <a href="{% url 'invoice:invoice-list-date-negative' %}" class="has-text-white" style="font-size: 11px;
+         font-weight: bold;">Filter by Date (+)</a>
+                         </button></div>
+                      <div style="padding:10px;"><button  class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                         <a href="{% url 'invoice:invoice-list-date-positive' %}" class="has-text-white" style="font-size: 11px;
+         font-weight: bold;">Filter by Date (-)</a>
+                         </button></div>
+
+               <div style="padding:10px;"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                         <a href="#" class="has-text-white" style="font-size: 11px;
+         font-weight: bold;">Search</a>
+                         </button></div> -->
+
+
+                    <!-- <div style="padding:10px;"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                           <a href="/admin" class="has-text-white" style="font-size: 11px;
+           font-weight: bold;">Admin Panel</a>
+                           </button></div>
+
+                  <div style="padding:10px;"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                           <a href="{% url 'invoice:export' %}" class="has-text-white" style="font-size: 11px;
+           font-weight: bold;">Export As CSV</a>
+                           </button></div>
+              <div style="padding:10px;"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                           <a href="{% url 'invoice:export' %}" class="has-text-white" style="font-size: 11px;
+           font-weight: bold;">Export As PDF</a>
+                           </button></div> -->
+
+
+            </header>
+
+
+            <!-- end section -->
+
+
+            <div class="card-content-edited">
+                <div class="content">
+
+                    <table class="table is-fullwidth is-bordered is-hoverable is-striped" id="myTable">
+                        <tbody>
+                        <thead>
+                        <tr>
+                            <th></th>
+
+                            <th style="text-align:center;">CUSTOMER ID</th>
+                            <th style="text-align:center;">DATE</th>
+                            <th style="text-align:center;">CUSTOMER NAME</th>
+                            <th style="text-align:center;">SERVICE TYPE</th>
+
+
+                            <th style="text-align:center;">GST(%)</th>
+                            <th style="text-align:center;">TOTAL <br>(excluded GST)</th>
+                            <th style="text-align:center;">TOTAL <br>(included GST)</th>
+
+                            <th style="text-align:center;">View</th>
+                            <th style="text-align:center;">Edit</th>
+                            <th style="text-align:center;color:red;">Delete</th>
+                            <th style="text-align:center;">Download</th>
+
+
+                        </tr>
+                        </thead>
+                        {% for invoice1 in invoices1 %}
+                        <tr>
+                            <td><input class="checkbox" type="checkbox" value="{{invoice1.id}}" name="invoice1_id"
+                                       size="2"/></td>
+
+                            <td width="10%" style="text-align:center;vertical-align: middle;">{{invoice1.id}}</td>
+                            <td width="10%" style="text-align:center;vertical-align: middle;">{{invoice1.date}}</td>
+                            <td width="39%" style="text-align:center;vertical-align: middle;">{{invoice1.customer}}</td>
+                            <td width="39%" style="text-align:center;vertical-align: middle;"><img class="service-img"
+                                                                                                   src="{{invoice1.service}}">
+                            </td>
+
+
+                            <td style="text-align:center;vertical-align: middle;">{{invoice1.gstpercentage}}%</td>
+
+                            <td style="text-align:center;vertical-align: middle;">{{invoice1.currency}}<br>{{invoice1.total_amount}}
+                            </td>
+                            <td style="text-align:center;vertical-align: middle;">{{invoice1.currency}}<br>
+                                {{invoice1.subtotal}}
+                            </td>
+
+                            <td width="1%">
+                                <a class="w3-btn w3-white w3-border w3-border-red w3-round-large"
+                                   href="{% url 'invoice:invoice-detail' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+
+                                    <div style="font-weight:bold;font-size:10px;"><i class="material-icons">remove_red_eye</i>
+                                    </div>
+
+                                </a>
+                            </td>
+                            <td width="1%">
+                                <a class="w3-btn w3-white w3-border w3-border-red w3-round-large"
+                                   href="{% url 'invoice:update' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                    <div style="font-weight:bold;font-size:10px;"><i class="material-icons">edit</i>
+                                    </div>
+                                </a>
+                            </td>
+
+                            <td width="1%">
+
+                                <a class="w3-btn w3-white w3-border w3-border-red w3-round-large"
+                                   href="{% url 'invoice:invoice-delete' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+
+                                    <div style="font-weight:bold;font-size:10px;color:red;"><i class="material-icons">delete_forever</i>
+                                    </div>
+                                </a>
+
+
+                            </td>
+
+
+                            <td width="1%">
+                                <a class="w3-btn w3-white w3-border w3-border-red w3-round-large"
+                                   href="{% url 'invoice:invoice-download' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                    <div style="font-weight:bold;font-size:10px;"><i class="material-icons">file_download</i>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <br/><br/><br/>
+
+    </form>
+
+    {% endblock content %}

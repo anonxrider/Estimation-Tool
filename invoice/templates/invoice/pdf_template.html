@@ -1,0 +1,313 @@
+<!DOCTYPE html>{% load static%}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>APRO IT Solutions Pvt. Ltd. - ESTIMATE#{{invoice_id}}</title>
+    <!--<link rel="stylesheet" href="{%static 'css/invoice-template-1.css' %}" media="all" />-->
+    
+
+
+    <style>
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 20px;
+        }
+
+            table th,
+            table td {
+                padding: 2px !important;
+                background: #FFFFFF;
+                text-align: center;
+                border-bottom: 1px solid #FFFFFF;
+                padding-left: 18px !important;
+            }
+
+            table th {
+                white-space: nowrap;
+                font-weight: normal;
+                background-color: #103050;
+            }
+
+            table td {
+                text-align: left;
+            }
+
+                table td h3 {
+                    color: #57B223;
+                    font-size: 1.2em;
+                    font-weight: normal;
+                    margin: 0 0 0.2em 0;
+                }
+
+            table .no {
+                color: #FFFFFF;
+                font-size: 1.6em;
+                background: #57B223;
+            }
+
+
+            table .desc {
+                text-align: left;
+            }
+
+            table .unit {
+                background: #DDDDDD;
+            }
+
+            table .qty {
+            }
+
+            table .total {
+                background: #57B223;
+                color: #FFFFFF;
+            }
+
+            table td.unit,
+            table td.qty,
+            table td.total {
+                font-size: 1.2em;
+            }
+
+            table tbody tr:last-child td {
+                border: none;
+            }
+
+            table tfoot td {
+                padding: 10px 20px;
+                background: #FFFFFF;
+                border-bottom: none;
+                font-size: 1.2em;
+                white-space: nowrap;
+                border-top: 0px solid #AAAAAA;
+            }
+
+            table tfoot tr:first-child td {
+                border-top: none;
+            }
+
+            table tfoot tr:last-child td {
+                color: #57B223;
+                font-size: 1.4em;
+                background-color: #f3f5f5;
+                border-top: 0px solid #57B223;
+            }
+
+            table tfoot tr td:first-child {
+                border: none;
+            }
+
+
+
+        #sectiontazhea {
+            /*padding-bottom: 21px!important;*/
+        }
+
+        #leftb {
+            background-color: #37c2df;
+            width: 15px;
+            height: 30px;
+            margin-top: 57px;
+        }
+
+        #middleb {
+            background-color: #37c2df;
+            height: 30px;
+            width: 1px;
+            margin-left: 326px;
+            margin-top: -100px;
+        }
+
+        #textb_r {
+            margin-left: 361px;
+            margin-top: -60px;
+        }
+
+        #textb_l {
+            margin-left: 36px;
+            margin-top: -85px;
+        }
+
+        #section {
+            height: 200px;
+            width: 1300px;
+            background-color: wheat;
+            margin-bottom: -300px;
+        }
+
+        #longb {
+            width: 228px;
+            height: 30px;
+            background-color: #103050;
+            /*float: right;*/
+            margin-top: -33px;
+            margin-left: 567px;
+            margin-right: -566px;
+        }
+
+        p {
+            font-family: helvetica;
+        }
+
+        #sec2 {
+            /*padding: 10px;*/
+        }
+
+        #sec1 {
+            height: 200px;
+            /*width: 200px;*/
+            background-color: #ffffff;
+        }
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    
+
+
+
+
+
+
+
+    <header class="clearfix" style="position:sticky;height:100px;top:auto;" >
+       
+            <object id="objectsvg" data="{% static 'img/logo%20new.svg'%}"> </object>
+
+    
+
+    </header>
+        <div id="company">
+            
+            <!--<h1 style="color: #103050;">{{company.name}}</h1>
+            <div><b>{{company.address}}</b></div>
+            <div><b>{{company.phone}}</b></div>
+            <div><a href="mailto:{{company.email}}"><b>{{company.email}}</b></a></div>-->
+        </div>
+        </div>
+    
+    <main>
+
+        <div id="details" >
+            <p id="estimatemain">ESTIMATE</p>
+            <p id="dateid">Date: {{date|date:"d-m-Y"}} </p><br />
+            <div id="client">
+
+                <!--          <div class="to">INVOICE TO:</div>-->
+
+
+                <p id="clientsection"><b>Client Name:</b> {{customer}}</p>
+                <p id="clientsection"><b>Service Type:</b> {{service_type}} - {{message}}</p>
+                <p id="clientsectiona">{{bill_title}}</p>
+
+
+
+                <!--<h2 class="name"><b>Service:</b> {{service_type}} - {{message}}</h2>-->
+                <!--<div class="to"><b>Service Type:</b> APRO IT Solutions - {{message}}</div>-->
+                <!--  <div class="address">{{billing_address}}</div> -->
+                <!--          <div class="email"><a href="mailto:{{customer_email}}">{{bill_title}}</a></div>-->
+
+            </div><br />
+
+            <div id="invoice">
+                <!--          <h1>#{{invoice_id}}</h1>-->
+                <!--<div class="date">Date: {{date}}</div>-->
+                <!--         <div class="date">Due Date: {{due_date}}</div>-->
+            </div>
+        </div>
+
+
+        <table id="tableid" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th><p id="tableedit">#</p></th>
+                    <th><p id="tableedit">Description</p></th>
+                    <!--<th class="desc">DESCRIPTION</th>-->
+                    <th><p id="tableedit">Qty</p></th>
+                    <th><p id="tableedit">Rate</p></th>
+                    <th><p id="tableedit">Total</p></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for item in lineitem %}
+                <tr>
+                    <td id="sectioneditother"><p id="totalidp">{{forloop.counter}}</p></td>
+
+                    <!--<td style=" color: #103050;"><b>{{item.service}}</b> <br /><p>{{item.description|linebreaks}}</p></td>-->
+                    <!--<td class="desc">{{item.description}}</td>-->
+                    <td id="sectioneditother"><p id="sectioneditothertext">{{item.service}}</p><p>{{item.description|linebreaks}}</p></td>
+
+                    <td id="sectioneditother"><p id="totalidp">{{item.quantity}}</p></td>
+
+                    <td id="sectioneditamount"><p id="totalidp">₹ {{item.rate}}</p></td>
+
+                    <td id="sectioneditamount"><p id="totalidp">₹ {{item.amount}}</p></td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+
+
+
+            <!-- Edited by APRO IT Solutions Pvt. Ltd. -->
+
+
+            <tfoot id="tfootlast">
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="1" id="totalidname"><p id="totalidp">Total Without GST</p></td>
+                    <td id="totalidname"><p id="totalidp">₹ {{invoice_total}}</p></td>
+
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="1" id="totalidname"><p id="totalidp">GST {{invoice_gst}}%</p></td>
+
+                    <td id="totalidname"><p id="totalidp">₹ {{invoice_total}}</p></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="1" id="totalidname"><p id="totalidp">Total</p></td>
+                    <td id="totalid"><p id="totalidp">₹ {{invoice_total}}</p></td>
+                </tr>
+            </tfoot>
+
+            <!-- Edited by APRO IT Solutions Pvt. Ltd. -->
+
+        </table>
+
+        <h1 id="fulldescriptionid">{{fulldescription|linebreaks}}</h1><br />
+        <div id="termsandconditionsdiv">Terms and Conditions:</div>
+        <h1 id="termsandconditionsid">{{termsandconditions|linebreaks}}</h1><br />
+
+
+
+    </main>
+
+
+
+
+    <footer><object id="newww" style="margin-top: 294px; " data="{% static 'img/FOOTER-02.svg'%}"> </object></footer>
+
+
+
+
+   
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+{% extends 'invoice/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="{% static 'css/invoicelist.css' %}" rel="stylesheet">
+
+<div class="columns is-centered has-text-centered">
+    <div class="column is-half">
+        <div class="card has-background-white-ter">
+            <h1 class="title is-3"></h1>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Logo Start Section-->
+<div class="classone" ><object data="http://apropack.com/assets/apro-it.svg" width="300" height="auto"> </object>
+<!--Time or Clock Start Section-->
+     <div class="classone" ><span id="clock"></span></div><br>
+<!--Time or Clock End Section-->
+<!--Title Start Section-->
+                <p class="classtwo">Tax Based Estimates</p> <br>
+<!--Title End Section-->
+</div>
+<!--Logo End Section-->
+
+<!--Time or Clock JavaScript Start Section-->
+<script type="text/javascript">
+    var clockElement = document.getElementById('clock');
+
+    function clock() {
+        clockElement.textContent = new Date().toString();
+    }
+    setInterval(clock, 1000);
+</script>
+<!--Time or Clock JavaScript End Section-->
+
+
+
+
+<form action="{% url 'invoice:invoice-list' %}" method="post">
+    {% csrf_token %}
+
+    <div class="card">
+        <header class="card-header" style="display:block-ruby;">
+            <p class="card-header-title">
+                Estimate Generator v1 <br>&nbsp;
+                <div class="classfour"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:invoice-create' %}" class="has-text-white classthree" >Create New Tax Based Estimate</a>
+                </button></div>
+
+<!--           <div style="padding:10px;"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large"> &lt;!&ndash;  <button class="button is-rounded is-info">&ndash;&gt;-->
+<!--                <a href="{% url 'invoice:invoice-create-2' %}" class="has-text-white" style="font-size: 11px;-->
+<!--font-weight: bold;">Create New Non Tax Based Estimate</a>-->
+<!--                </button></div>-->
+            <div class="classfive"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:invoice-list' %}" class="has-text-white classthree" >View Tax Estimates</a>
+                </button></div>
+             <div class="classfive"><button title="Logout" class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:logout' %}" class="has-text-white classthree" > Logout</a>
+                </button></div>
+<!--            <div style="padding:10px;"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">-->
+<!--                <a href="{% url 'invoice:invoice-list-2' %}" class="has-text-white" style="font-size: 11px;-->
+<!--font-weight: bold;">View Non Tax Estimates</a>-->
+<!--                </button></div>-->
+
+
+<!--                <div><button class="button is-rounded is-info">-->
+<!--                <a href="{% url 'invoice:invoice-list-2' %}" class="has-text-white">View Non Tax Estimates</a>-->
+<!--                </button></div>-->
+
+
+            </p>
+
+
+        </header>
+
+
+
+         <header class="card-header" >
+  <p class="card-header-title">
+                <br>&nbsp;
+
+           <div class="classfive"><button  class="w3-btn w3-white w3-border w3-border-red w3-round-large"> <!--  <button class="button is-rounded is-info">-->
+                <a href="{% url 'invoice:invoice-list-date-negative' %}" class="has-text-white classthree" >Filter by Date (+)</a>
+                </button></div>
+             <div class="classfive"><button  class="w3-btn w3-white w3-border w3-border-red w3-round-large"> <!--  <button class="button is-rounded is-info">-->
+                <a href="{% url 'invoice:invoice-list-date-positive' %}" class="has-text-white classthree" >Filter by Date (-)</a>
+                </button></div>
+
+     <div class="classfive"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="#" class="has-text-white classthree" >Search</a>
+                </button></div>
+
+
+         <div class="classfive"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="/admin" class="has-text-white classthree" >Admin Panel</a>
+                </button></div>
+
+       <div class="classfive"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:export' %}" class="has-text-white classthree" >Export As CSV</a>
+                </button></div>
+   <div class="classfive"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:export' %}" class="has-text-white classthree" >Export As PDF</a>
+                </button></div>
+<!--                <div><button class="button is-rounded is-info">-->
+<!--                <a href="{% url 'invoice:invoice-list-2' %}" class="has-text-white">View Non Tax Estimates</a>-->
+<!--                </button></div>-->
+
+
+
+
+
+        </header>
+
+
+
+
+
+        <div class="card-content-edited">
+            <div class="content">
+
+                <table class="table is-fullwidth is-bordered is-hoverable is-striped" id="myTable">
+                    <tbody>
+                    <thead>
+                        <tr>
+                            <th></th>
+
+                            <th style="text-align:center;">CUSTOMER ID</th>
+                            <th style="text-align:center;">DATE</th>
+                            <th style="text-align:center;">CUSTOMER NAME </th>
+                            <th style="text-align:center;">SERVICE TYPE</th>
+
+<!--                            <th>DATE</th>-->
+
+                            <th style="text-align:center;">GST(%)</th>
+                            <th style="text-align:center;">TOTAL <br>(excluded GST)</th>
+                            <th style="text-align:center;">TOTAL <br>(included GST)</th>
+
+                            <th style="text-align:center;">View</th>
+                            <th style="text-align:center;">Edit</th>
+                            <th style="text-align:center;color:red;">Delete</th>
+                            <th style="text-align:center;">Download</th>
+
+
+                        </tr>
+                    </thead>
+                    {% for invoice1 in invoices1 %}
+                    <tr>
+                        <td><input class="checkbox" type="checkbox" value="{{invoice1.id}}" name="invoice1_id" size="2" /></td>
+
+                        <td width="10%" style="text-align:center;vertical-align: middle;">{{invoice1.id}}</td>
+                        <td width="10%" style="text-align:center;vertical-align: middle;">{{invoice1.date}}</td>
+                        <td width="39%" style="text-align:center;vertical-align: middle;">{{invoice1.customer}}</td>
+                        <td width="39%" style="text-align:center;vertical-align: middle;"><img class="service-img" src="{{invoice1.service}}"></td>
+
+<!--                        <td width="39%"> {{invoice1.date}}</td>-->
+ <td style="text-align:center;vertical-align: middle;">{{invoice1.gstpercentage}}%</td>
+
+                        <td style="text-align:center;vertical-align: middle;">{{invoice1.currency}}<br>{{invoice1.total_amount}}</td>
+                         <td style="text-align:center;vertical-align: middle;">{{invoice1.currency}}<br> {{invoice1.subtotal}}</td>
+                        <!--<td class="level-right">
+                            {% if invoice.get_status %}
+                            <a class="button is-small is-success" href="#">Paid</a>
+                            {% else %}
+                            <a class="button is-small is-warning" href="#">Not Paid</a>
+                            {% endif %}
+                        </td>-->
+                           <td width="1%">
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large" href="{% url 'invoice:invoice-detail' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+<!--                                <a href="{% url 'invoice:invoice-detail' id=invoice1.id %}">-->
+                                <div style="font-weight:bold;font-size:10px;"><i class="material-icons">remove_red_eye</i></div>
+<!--                                <div class="button is-small is-info">View</div>-->
+                            </a>
+                        </td>   <td width="1%">
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large" href="{% url 'invoice:update' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                <div style="font-weight:bold;font-size:10px;"><i class="material-icons">edit</i></div>
+                            </a>
+                        </td>
+
+                         <td width="1%">
+
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large" href="{% url 'invoice:invoice-delete' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+
+                                <div style="font-weight:bold;font-size:10px;color:red;"><i class="material-icons">delete_forever</i></div>
+                            </a>
+
+
+                        </td>
+
+
+
+                        <td width="1%">
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large" href="{% url 'invoice:invoice-download' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                <div style="font-weight:bold;font-size:10px;"><i class="material-icons">file_download</i></div>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div><br /><br /><br />
+    <!--<div class="card has-background-white-ter">
+        <header class="card-header">
+            <p class="card-header-title">
+                Change Order Status
+            </p>
+        </header>
+        <div class="card-content">
+            <div class="select is-rounded">
+                <select id="status" name="status">
+                    <option value="1">Paid</option>
+                    <option value="0">Not Paid</option>
+                </select>
+            </div>
+            <input class="button  is-info is-rounded" type="submit" class="btn" value="Change Status" name="mybtn">
+        </div>
+    </div>-->
+</form>
+
+{% endblock content %}

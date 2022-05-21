@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>APRO IT Solutions Pvt. Ltd. - ESTIMATE #{{invoice2_id}}{{customer}}</title>
+{% load humanize %}
+{% load static%}
+
+
+<style type="text/css">
+
+        /* Reset body padding and margins */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Make Header Sticky */
+        #header_container {
+            background: #eee0;
+            height: 60px;
+            left: 0;
+            position: fixed;
+            width: 80%;
+            top: 0;
+        }
+
+        #header {
+            line-height: 60px;
+            margin: 0 auto;
+            width: 940px;
+            text-align: center;
+            bottom:3em;
+        }
+
+        /* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
+        #container {
+            margin: 0 auto;
+
+            overflow: auto;
+            padding: 80px 0;
+            width: 940px;
+        }
+
+
+        /* Make Footer Sticky */
+        #footer_container {
+            bottom: 0;
+            height: 100px;
+            left: 0;
+            position: fixed;
+            width: 100%;
+        }
+
+        #content {
+        }
+
+
+
+        #footer {
+            line-height: 60px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #datemargin {
+        }
+
+        .serial {
+            text-align: center;
+            margin-top: -99px;
+font-family: Helvetica;
+            padding-bottom: 4px;
+        }
+
+
+
+        .quantity {
+            text-align: center;
+            font-family: Helvetica;
+        }
+
+        .rate {
+            text-align: center;
+            font-family: Helvetica;
+        }
+
+        .item-row {
+font-family: Helvetica;
+        }
+
+        @page {
+        margin:0mm;
+}
+
+    </style>
+</head>
+<body onload="myFunction()" style="margin-left: auto; margin-right: auto;" id="body">
+    <!-- BEGIN: Sticky Header -->
+
+
+
+
+<style>
+
+.page-header {
+  position: fixed;
+  top: 10mm;
+  right:11mm;
+  width: 100%;
+  border-bottom: 0px solid black; /* for demo */
+
+
+}
+
+.page-header, .page-header-space {
+
+}
+
+.object{
+float:right;
+}
+
+td {
+
+vertical-align: top;
+}
+
+
+#font{
+font-family: Helvetica;
+}
+
+.fontweight{
+font-weight:normal;
+
+}
+
+</style>
+
+
+    <div class="page-header" >
+  <img src="{{service}}" style=" height: 115px; width: auto; "  align="right" />
+
+    <br/>
+   </div>
+
+
+
+<!--    <div id="header_container" >-->
+<!--        <div id="header" >-->
+
+
+<!--         <img src="https://svgshare.com/i/fjk.svg" style=" height: 89px; width: auto;" align="right" />-->
+
+
+<!--        </div>-->
+<!--    </div>-->
+    <!-- END: Sticky Header -->
+    <!-- BEGIN: Page Content -->
+
+
+        <div style="margin-bottom: -188px;
+padding-top: 155px;
+margin-left: -1px;width: 97%;">  <p id="font" style="text-align: center; font-weight: bold; font-size: 33px;  margin-bottom: -36px;color:#0b3150;">ESTIMATE</p>
+            <p id="font" style=" margin-left: 58px;color:#0b3150;">Date: {{date|date:"d-m-Y"}} </p>
+               <p id="font" style=" font-size: 20px;margin-left: 58px;color:#0b3150;"><b>Client Name:</b> {{customer}}</p>
+            <p id="font" style="  margin-top: -14px; font-size: 20px;margin-left: 58px;color:#0b3150;"><b>Service Type:</b> {{service_type}}</p>
+            <p id="font" style="  margin-top: 26px;margin-left: 58px;font-size:20px; color:#0b3150;width: 93%;">{{bill_title}}</p></div>
+
+  <div  id="container">
+
+        <div id="content">
+
+
+
+            <table   cellspacing="0" cellpadding="0" style="top: 166px;
+position: relative;
+padding-bottom: 237px;
+margin-bottom: -74px;
+margin-left: 15mm;
+margin-right: 15mm;
+">
+                <thead  style="background-color: #0b3150;">
+                    <tr style="color:white; background-color: #0b3150;">
+                        <th style="width: 45px; " ><p id="font" class="fontweight">#</p></th>
+                        <th ><p id="font" class="fontweight" style="float: left;
+margin-left: 7px;">Description</p></th>
+                        <th><p id="font" class="fontweight">Qty</p></th>
+                        <th><p id="font" class="fontweight">Rate</p></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    {% for item in lineitem2 %}
+                    <tr>
+                        <td style="margin-top: 26px;
+display: flex;margin-left: 17px;">
+                            <div class="item-row" style="margin-top: 89px;color: #0b3150;">
+                                <div class="serial" style="font-size:17px">
+                                     {{forloop.counter}}
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-row" style="width: 85%;color: #0b3150;margin-left: 0px;">
+                                <div class="details" style="margin-left: 7px;
+float: left;">
+
+                                    <p style="font-size: 17px;"><strong>{{item.service}}</strong></p>
+                                    <div style="font-size: 15px;margin-top: -12px;  ">{{item.description|linebreaks}}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-row" style="color: #0b3150;">
+                                <div class="quantity">
+                                    <p>{{item.quantity}}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-row" style="color: #0b3150;">
+                                <div class="rate" style="font-weight:bold;">
+                                    <p>{{currency}} {{item.rate|intcomma}}</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot id="tfoota" style="display: table-row-group;">
+
+
+
+                </tfoot>
+            </table>
+
+
+
+        </div>
+       <div style="page-break-before: always;display: table-row-group;
+margin-top: 100px;"><h1  style=" font-size: 16px;margin-left: 56px; font-weight: 400; color: #0b3150; font-family: Helvetica, Sans-Serif; margin-top: 45px; width: 89%;">{{fulldescription|linebreaks}}</h1><br />
+            <div style="color: #0b3150;margin-left: 56px; font-family: Helvetica, Sans-Serif; font-weight:bold;" >Terms and Conditions:</div>
+            <h1 style=" width: 89%;font-size: 16px;margin-left: 56px; font-weight: 400; color: #0b3150; font-family: Helvetica, Sans-Serif; margin-top: -12px;">{{termsandconditions|linebreaks}}</h1><br /></div>
+
+ </div>
+
+
+
+    <!-- END: Page Content -->
+    <!-- BEGIN: Sticky Footer -->
+    <div id="footer_container">
+        <div id="footer">
+            <img src="https://svgshare.com/i/fkr.svg" />
+        </div>
+    </div>
+    <!-- END: Sticky Footer -->
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load humanize %}
+    <style>
+        	table {
+			width:100%;
+			height:100%;
+			border:1px;
+			border-collapse:collapse;
+			padding:4px;
+		}
+		table th {
+			border:1px;
+			padding:15px;
+			background: #f0f0f0;
+			color: #313030;
+		}
+		table td {
+			border:1px;
+			text-align:left;
+			padding:4px;
+			color: #313030;
+			vertical-align:baseline;
+		}
+    </style>
+</head>
+<body>
+
+
+            <table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th style="padding:10px">Description</th>
+				<th>Qty</th>
+				<th>Rate</th>
+			</tr>
+		</thead>
+		<tbody>
+  {% for item in lineitem %}
+			<tr>
+				<td style="text-align:center;">{{forloop.counter}}</td>
+                <td><div><strong>{{item.service}}</strong></div> <br/><div style="    margin-top: -30px;">{{item.description|linebreaks}}</div></td>
+				<td>{{item.quantity}}</td>
+				<td>₹ {{item.rate|intcomma}}</td>
+			</tr>
+  {% endfor %}
+		</tbody>
+
+	</table>
+
+
+
+</body>
+</html>

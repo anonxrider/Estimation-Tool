@@ -1,0 +1,430 @@
+﻿{% extends "invoice/base.html" %}
+{% load static%}
+{% load bulma_tags %}
+{% block content %}
+<br>
+<style>
+   .divone{
+   text-align: center;
+   }
+   .divtwo{
+   padding: 10px;
+   }
+   .classone{
+   font-size: 11px;
+   font-weight: bold;
+   }
+   .serviceimage{
+   height: 100px;
+   width: 200px;
+   }
+    input[type=radio]:checked + label>img {
+      border: 1px solid #fff;
+      box-shadow: 0 0 3px 3px #090;
+    }
+    /* Stuff after this is only to make things more pretty */
+    input[type=radio] + label>img {
+       width: 69px;
+       height: 53px;
+       transition: 500ms all;
+    }
+</style>
+<!--Service Change Description Change ETC JavaScript Start Section-->
+<script type="text/javascript">
+function bodyloadfirst() {
+    document.getElementById("div1a").style.display = "block";
+    document.getElementById("div1b").style.display = "none";
+    document.getElementById("div1c").style.display = "none";
+    document.getElementById("div1d").style.display = "none";
+    document.getElementById("aprorigsimage").style.display = "block";
+    document.getElementById("aproitimage").style.display = "none";
+    document.getElementById("aprocmsimage").style.display = "none";
+    document.getElementById("aprohostingimage").style.display = "none";
+    document.getElementById("div2A").style.display = "block";
+    document.getElementById("div2B").style.display = "none";
+    document.getElementById("div2C").style.display = "none";
+    document.getElementById("div2D").style.display = "none";
+}
+function show1() {
+    document.getElementById("div1a").style.display = "block";
+    document.getElementById("div1b").style.display = "none";
+    document.getElementById("div1c").style.display = "none";
+    document.getElementById("div1d").style.display = "none";
+    document.getElementById("aprorigsimage").style.display = "block";
+    document.getElementById("aproitimage").style.display = "none";
+    document.getElementById("aprocmsimage").style.display = "none";
+    document.getElementById("aprohostingimage").style.display = "none";
+    document.getElementById("div2A").style.display = "block";
+    document.getElementById("div2B").style.display = "none";
+    document.getElementById("div2C").style.display = "none";
+    document.getElementById("div2D").style.display = "none";
+}
+function show2() {
+    document.getElementById("div1a").style.display = "none";
+    document.getElementById("div1b").style.display = "block";
+    document.getElementById("div1c").style.display = "none";
+    document.getElementById("div1d").style.display = "none";
+    document.getElementById("aprorigsimage").style.display = "none";
+    document.getElementById("aproitimage").style.display = "block";
+    document.getElementById("aprocmsimage").style.display = "none";
+    document.getElementById("aprohostingimage").style.display = "none";
+    document.getElementById("div2A").style.display = "none";
+    document.getElementById("div2B").style.display = "block";
+    document.getElementById("div2C").style.display = "none";
+    document.getElementById("div2D").style.display = "none";
+}
+function show3() {
+    document.getElementById("div1a").style.display = "none";
+    document.getElementById("div1b").style.display = "none";
+    document.getElementById("div1c").style.display = "block";
+    document.getElementById("div1d").style.display = "none";
+    document.getElementById("aprorigsimage").style.display = "none";
+    document.getElementById("aproitimage").style.display = "none";
+    document.getElementById("aprocmsimage").style.display = "block";
+    document.getElementById("aprohostingimage").style.display = "none";
+    document.getElementById("div2A").style.display = "none";
+    document.getElementById("div2B").style.display = "none";
+    document.getElementById("div2C").style.display = "block";
+    document.getElementById("div2D").style.display = "none";
+}
+function show4() {
+    document.getElementById("div1a").style.display = "none";
+    document.getElementById("div1b").style.display = "none";
+    document.getElementById("div1c").style.display = "none";
+    document.getElementById("div1d").style.display = "block";
+    document.getElementById("aprorigsimage").style.display = "none";
+    document.getElementById("aproitimage").style.display = "none";
+    document.getElementById("aprocmsimage").style.display = "none";
+    document.getElementById("aprohostingimage").style.display = "block";
+    document.getElementById("div2A").style.display = "none";
+    document.getElementById("div2B").style.display = "none";
+    document.getElementById("div2C").style.display = "none";
+    document.getElementById("div2D").style.display = "block";
+}
+</script>
+<!--Service Change Description Change etc JavaScript End Section-->
+<!--CSS Linking Start Section-->
+<link href="{% static 'css/invoicecreate.css' %}" rel="stylesheet">
+<!--CSS Linking End Section-->
+<section class="hero is-fullheight">
+   <div class="container">
+      <div class="card white-ter">
+         <div class="divone">
+<!--Logo Start Section-->
+            <object data="http://apropack.com/assets/apro-it.svg" width="300" height="auto"></object>
+<!--Logo End Section-->
+         </div>
+<!--Time or Clock Start Section-->
+         <div class="divone">
+            <span id="clock"></span>
+         </div>
+<!--Time or Clock End Section-->
+         <p class="newclass1">Create Tax Based Estimate</p>
+         <br>
+         <header class="card-header">
+            <p class="card-header-title">
+               Estimate Generator v1 <br>&nbsp;
+            <div class="divtwo">
+               <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+               <a href="{% url 'invoice:invoice-create' %}" class="has-text-white classone">Create Tax Based Estimate</a>
+               </button>
+            </div>
+            <div class="divtwo">
+               <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+               <a href="{% url 'invoice:invoice-list' %}" class="has-text-white classone">View Tax Estimates</a>
+               </button>
+            </div>
+            <div class="divtwo">
+               <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+               <a href="{% url 'invoice:logout' %}" class="has-text-white classone">Logout</a>
+               </button>
+            </div>
+            </p>
+         </header>
+         <div class="hero-body" style="box-shadow: 0 0 3px 3px #0ab6d921; border-radius: 73px;">
+<!--Time or Clock JavaScript Start Section-->
+<script type="text/javascript">
+var clockElement = document.getElementById("clock");
+function clock() {
+    clockElement.textContent = new Date().toString();
+}
+setInterval(clock, 1000);
+</script>
+<!--Time or Clock JavaScript End Section-->
+            <form class="" method="POST" action="" >
+               {% csrf_token %}
+               <div class="columns is-centered">
+                  <div class="column is-one-third">
+                     <label class="label">Service Type:</label>
+                     <input type="radio" checked id="AproRigs" name="service" value="http://apropack.com/assets/apro-rigs.svg" onclick="show1();">
+                     <label for="AproRigs">
+                        <!--Apro Rigs-->
+                         <img src="http://apropack.com/assets/apro-rigs.svg" title="APRO RIGS"/>
+                     </label>
+                     <input type="radio" id="AproITSolutions" name="service" value="http://apropack.com/assets/apro-it.svg" onclick="show2();">
+                     <label for="AproITSolutions">
+                        <!--Apro IT Solutions-->
+                         <img src="http://apropack.com/assets/apro-it.svg" title="APRO IT SOLUTIONS" />
+                     </label>
+                     <input type="radio" id="AproHosting" name="service" value="http://apropack.com/assets/apro-hosting.svg" onclick="show4();">
+                     <label for="AproHosting">
+                        <!--Apro Hosting-->
+                         <img src="http://apropack.com/assets/apro-hosting.svg" title="APRO HOSTING" />
+                     </label>
+                     <input type="radio" id="AproCMS" name="service" value="http://apropack.com/assets/apro-it.svg" onclick="show3();">
+                     <label for="AproCMS">
+                        <!--Apro CMS -->
+                         <img src="http://apropack.com/assets/apro-it.svg"  title="APRO CMS"/>
+                     </label>
+                  </div>
+                  <div class="column is-one-third" >
+                     {{form.customer|bulma}}
+                  </div>
+                  <div class="column is-one-third">
+                     {{form.service_type|bulma}}
+                  </div>
+               </div>
+               <div class="columns is-centered">
+                  <div class="column is-one-third">
+                     <label class="label">Choose Tax Percentage:</label>
+                     <select name="gst" id="gst" class="form-control control input" onChange="update()">
+                        <option value="0.05">5%</option>
+                        <option value="0.12" selected>12%</option>
+                        <option value="0.18">18%</option>
+                        <option value="0.28">28%</option>
+                     </select>
+                  </div>
+                  <div class="column is-one-third">
+                     {{form.date|bulma}}
+                  </div>
+                  <div class="column is-one-third">
+                     <div id="div1a">
+                        {{form.termsandconditionsaprorigs|bulma}}
+                     </div>
+                     <div id="div1b">
+                        {{form.termsandconditionsaproitsolutions|bulma}}
+                     </div>
+                     <div id="div1c">
+                        {{form.termsandconditionsaprocms|bulma}}
+                     </div>
+                     <div id="div1d">
+                        {{form.termsandconditionsaprohosting|bulma}}
+                     </div>
+                  </div>
+               </div>
+               <div class="columns is-centered" >
+                  <div class="column is-one-third">
+                     <div id="div2A">
+                        {{form.fulldescriptionrigs|bulma}}
+                     </div>
+                     <div id="div2B">
+                        {{form.fulldescriptionit|bulma}}
+                     </div>
+                     <div id="div2C">
+                        {{form.fulldescriptioncms|bulma}}
+                     </div>
+                     <div id="div2D">
+                        {{form.fulldescriptionaprohosting|bulma}}
+                     </div>
+                  </div>
+                  <div class="column is-one-third">
+                     {{form.currency|bulma}}
+                  </div>
+                  <div class="column is-one-third">
+                     {{form.footer|bulma}}
+                  </div>
+               </div>
+               <div class="columns is-centered">
+                  <div class="column is-one-third">
+                     <label class="label">Selected Service:</label>
+                     <div id="aprorigsimage">
+                         <img src="http://apropack.com/assets/apro-rigs.svg" class="serviceimage"/>
+                     </div>
+                     <div id="aproitimage">
+                         <img src="http://apropack.com/assets/apro-it.svg" class="serviceimage"/>
+                     </div>
+                     <div id="aprohostingimage">
+                         <img src="http://apropack.com/assets/apro-hosting.svg" class="serviceimage"/>
+                     </div>
+                     <div id="aprocmsimage">
+                         <img src="http://apropack.com/assets/apro-it.svg" class="serviceimage"/>
+                     </div>
+                  </div>
+                  <div class="column is-one-third">
+                  </div>
+                  <div class="column is-one-third">
+                  </div>
+               </div>
+               <table class="table is-fullwidth is-bordered is-hoverable is-striped">
+                  <tbody>
+                  <thead>
+                     <tr style="text-align: center;background-color: #081c2d2e;">
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                        <th>Add</th>
+                     </tr>
+                     {{ formset.management_form }}
+                     {% for form in formset %}
+                     <tr style="background-color:#14b7db1a">
+                        <td>{{form.service}}</td>
+                        <td>{{form.description}}</td>
+                        <td>{{form.quantity}}</td>
+                        <td>{{form.rate}}</td>
+                        <td class="amount"></td>
+                        <td>
+                           <div class="input-group-append">
+                              <button class="button is-small btn btn-success add-form-row">
+                              +
+                              </button>&nbsp;
+                           </div>
+                        </td>
+                     </tr>
+                     {% endfor %}
+                  </thead>
+                  </tbody>
+               </table>
+               <div class="row spacer">
+                  <div class="columns">
+                     <div class="column">
+                     </div>
+                     <div class="col-4 offset-2">
+                        <button type="submit" class="w3-btn w3-white w3-border w3-border-red w3-round-large">Save Now</button>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row spacer">
+                     <div class="col-4 offset-2">
+                        <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                        <a href="{% url 'invoice:invoice-list' %}" class="has-text-white" style="font-size: 11px;
+                           font-weight: bold;">View Non Tax Estimates</a>
+                        </button>
+                        <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                        <a href="{% url 'invoice:invoice-list' %}" class="has-text-white" style="font-size: 11px;
+                           font-weight: bold;">View Tax Estimates</a>
+                        </button>
+                        <br><br>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+{% block custom_js %}
+<br>
+<script>
+ $("table input").on("input", function () {
+    var total = [];
+    var $tr = $(this).closest("tr");
+    var textValue1 = $("input.rate", $tr).val();
+    var textValue2 = $("input.quantity", $tr).val();
+    amt = textValue1 * textValue2;
+    //console.log(amt);
+    $(".amount", $tr).html(amt);
+    calc_total();
+    calc_tax();
+});
+//total
+function calc_total() {
+    var sum = 0;
+    $(".amount").each(function () {
+        sum += parseFloat($(this).text());
+    });
+    $("#total").text(sum);
+    console.log(sum);
+}
+//tax
+function calc_tax() {
+    $("#gst").on("change", function () {
+        //Getting Value
+        var selValue = $("#gst").val();
+        //Setting Value
+        if (this.selValue == "0") {
+            $("#total1").hide();
+        } else {
+            $("#total1").show();
+        }
+        var taxa = selValue;
+        $(".amount").each(function () {
+            taxa *= parseFloat($(this).text());
+        });
+        calc_total();
+        $("#total1").text(taxa.toFixed(2));
+        //var bbb = taxa.toFixed(2);
+    });
+}
+
+</script>
+<script type="text/javascript">
+function updateElementIndex(el, prefix, ndx) {
+    var id_regex = new RegExp("(" + prefix + "-\\d+)");
+    var replacement = prefix + "-" + ndx;
+    if ($(el).attr("for")) $(el).attr("for", $(el).attr("for").replace(id_regex, replacement));
+    if (el.id) el.id = el.id.replace(id_regex, replacement);
+    if (el.name) el.name = el.name.replace(id_regex, replacement);
+}
+function cloneMore(selector, prefix) {
+    var newElement = $(selector).clone(true);
+    console.log(newElement);
+    var total = $("#id_" + prefix + "-TOTAL_FORMS").val();
+    newElement.find(":input:not([type=button]):not([type=submit]):not([type=reset])").each(function () {
+        var name = $(this).attr("name");
+        if (name) {
+            name = name.replace("-" + (total - 1) + "-", "-" + total + "-");
+            var id = "id_" + name;
+            $(this).attr({ name: name, id: id }).val("").removeAttr("checked");
+        }
+    });
+    newElement.find("label").each(function () {
+        var forValue = $(this).attr("for");
+        if (forValue) {
+            forValue = forValue.replace("-" + (total - 1) + "-", "-" + total + "-");
+            $(this).attr({ for: forValue });
+        }
+    });
+    total++;
+    $("#id_" + prefix + "-TOTAL_FORMS").val(total);
+    $(selector).after(newElement);
+    $("div.form-row.button.is-primary").not(":last").hide();
+    //var conditionRow = $('.form-row:not(:last)');
+    //  conditionRow.find('.button.is-primary')
+    // conditionRow.hide();
+    // conditionRow.removeClass('btn-success').addClass('btn-danger')
+    // conditionRow.removeClass('add-form-row').addClass('remove-form-row')
+    // conditionRow.html('-');
+    // return false;
+}
+function deleteForm(prefix, btn) {
+    var total = parseInt($("#id_" + prefix + "-TOTAL_FORMS").val());
+    if (total > 1) {
+        btn.closest(".form-row").remove();
+        var forms = $(".form-row");
+        $("#id_" + prefix + "-TOTAL_FORMS").val(forms.length);
+        for (var i = 0, formCount = forms.length; i < formCount; i++) {
+            $(forms.get(i))
+                .find(":input")
+                .each(function () {
+                    updateElementIndex(this, prefix, i);
+                });
+        }
+    }
+    return false;
+}
+$(document).on("click", ".add-form-row", function (e) {
+    e.preventDefault();
+    cloneMore("table tr:last", "form");
+    return false;
+});
+$(document).on("click", ".remove-form-row", function (e) {
+    e.preventDefault();
+    deleteForm("form", $(this));
+    return false;
+});
+
+</script>
+{% endblock %}

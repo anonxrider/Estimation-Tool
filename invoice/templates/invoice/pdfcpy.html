@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+{% load static%}
+<html>
+
+
+<head>
+
+    <!--<link rel="stylesheet" href="{%static 'css/invoice-template-1.css' %}" media="all" />-->
+    <style>
+        /* Styles go here */
+        .page-header, .page-header-space {
+            height: 100px;
+        }
+
+        .page-footer, .page-footer-space {
+            height: 50px;
+        }
+
+        .page-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 0px solid black; /* for demo */
+            background: white; /* for demo */
+        }
+
+        .page-header {
+            position: fixed;
+            top: 0mm;
+            width: 100%;
+            border-bottom: 0px solid black; /* for demo */
+            background: white; /* for demo */
+        }
+
+        .page {
+            page-break-after: always;
+        }
+
+        @page {
+            margin: 20mm
+        }
+
+
+
+     
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="page-header" style="text-align: center">
+        <img src="https://aproitsolutions.com/wp-content/uploads/2019/07/apro-logo-for-web-new-dark-1.png" style=" height: 61px; width: auto; margin: 10px;" align="right">
+        <br />
+        
+
+
+    </div>
+
+    <div class="page-footer">
+
+        <img src="https://jinskadamthodu.com/FOOTER-02.svg" style="width: auto; height: 53px;">
+    </div>
+
+
+
+
+
+
+
+
+   
+
+        
+                    <!--place holder for the fixed-position header-->
+                    <div class="page-header-space"></div>
+                
+
+                    <!--*** CONTENT GOES HERE ***-->
+                    <div class="page">
+                        <p id="estimatemain">ESTIMATE</p>
+                        <p id="dateid">Date: {{date|date:"d-m-Y"}} </p><br />
+                        <div id="client">
+                            <p id="clientsection"><b>Client Name:</b> {{customer}}</p>
+                            <p id="clientsection"><b>Service Type:</b> {{service_type}} - {{message}}</p>
+                            <p id="clientsectiona">{{bill_title}}</p>
+                        </div>
+                        <table cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th><p>#</p></th>
+                                    <th><p>Description</p></th>
+                                    <!--<th class="desc">DESCRIPTION</th>-->
+                                    <th><p>Qty</p></th>
+                                    <th><p>Rate</p></th>
+                                    <th><p>Total</p></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {% for item in lineitem %}
+                                <tr>
+                                    <td><p>{{forloop.counter}}</p></td>
+                                    <!--<td style=" color: #103050;"><b>{{item.service}}</b> <br /><p>{{item.description|linebreaks}}</p></td>-->
+                                    <!--<td class="desc">{{item.description}}</td>-->
+                                    <td><p id="sectioneditothertext">{{item.service}}</p><p>{{item.description|linebreaks}}</p></td>
+
+                                    <td><p id="totalidp">{{item.quantity}}</p></td>
+
+                                    <td><p id="totalidp">₹ {{item.rate}}</p></td>
+
+                                    <td><p id="totalidp">₹ {{item.amount}}</p></td>
+
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+
+
+
+                            <!-- Edited by APRO IT Solutions Pvt. Ltd. -->
+
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="1" id="totalidname"><p id="totalidp">Total Without GST</p></td>
+                                    <td><p id="totalidp">₹ {{invoice_total}}</p></td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="1" id="totalidname"><p id="totalidp">GST {{invoice_gst}}%</p></td>
+
+                                    <td id="totalidname"><p id="totalidp">₹ {{invoice_total}}</p></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="1" id="totalidname"><p id="totalidp">Total</p></td>
+                                    <td id="totalid"><p id="totalidp">₹ {{invoice_total}}</p></td>
+                                </tr>
+                            </tfoot>
+
+                            <!-- Edited by APRO IT Solutions Pvt. Ltd. -->
+
+                        </table>
+                        <p style="color: black; font-size: 13px; font-family: Helvetica; font-weight: normal; line-height: 20px;">{{fulldescription|linebreaks}}</p><br />
+                        <div style="font-family: Helvetica; font-size: 22px; font-weight: bold; color: #103050">Terms and Conditions:</div>
+                        <p style="font-family: Helvetica; font-size: 22px; color: #103050">{{termsandconditions|linebreaks}}</p><br />
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--<div class="page">PAGE 2</div>
+                    <div class="page" style="line-height:3;">
+                       dfhsfth </div>-->
+            
+
+        
+
+    
+
+
+</body>
+
+</html>

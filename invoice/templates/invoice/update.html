@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <object data="/static/img/logo%2520new.svg" width="12%" height="auto"> </object>
+            <h1 style="text-align: center;">Update Panel</h1>
+        </div>
+        <h1>Customer ID {{invoice1.id}}</h1>
+
+        <form action="updaterecord/{{ invoice1.id }}" method="post" style="background-color: darkslategrey;">
+            {% csrf_token %} Customer Name:<br />
+            <input name="customername" value="{{ invoice1.customer }}" />
+            <br />
+            <br />
+            Bill Title:<br />
+            <input name="billtitle" value="{{ invoice1.bill_titlefront }}" />
+            <br />
+            <br />
+            Service Type:<br />
+            <input name="service_type" value="{{ invoice1.service_type }}" />
+            <br />
+            <br />
+
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

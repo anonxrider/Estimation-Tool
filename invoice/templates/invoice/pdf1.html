@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+ <style>
+
+
+#estimateheading
+   {
+    font-size:32px;
+    font-weight:bold;
+    text-align: center;
+   }
+
+#estimatedate
+   {
+    font-size:14px;
+    font-weight:normal;
+    text-align: left;
+   }
+
+#estimateclientname
+   {
+    font-size:17px;
+    font-weight:bold;
+    text-align: left;
+   }
+
+#estimateclientservicetype
+   {
+    font-size:17px;
+    font-weight:bold;
+    text-align: left;
+   }
+
+#estimatebilltitle
+   {
+    font-size:17px;
+    font-weight:normal;
+    text-align: left;
+   }
+#newid1
+   {
+    background-color:#103050;
+   }
+
+table
+   {
+    width: 100%;
+    }
+
+table.print-content
+    {
+     font-size: 12px;
+     border: 0px solid #dee2e6;
+     border-collapse: collapse !important;
+
+     }
+print-header 
+{
+position:fixed;
+top:0;
+right:0;
+}
+
+table.print-content td 
+{
+padding: .2rem .4rem;
+text-align: left;
+vertical-align: bottom;
+border-top: 0px solid #dee2e6;
+}
+
+
+        @media print {
+
+ html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+            
+            .print-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+              }
+            .print-header {
+            position:relative !important;
+            top:0;
+            right:0;
+            margin:10px;
+            }
+
+            .no-print {
+                display: none
+            }
+           
+            
+        }
+
+    </style>
+</head>
+
+<body onload="myFunction()">
+
+
+    <button onclick="window.print()" class="no-print">Print</button>
+
+    <table>
+        <!-- Start Header -->
+        <thead>
+            <tr>
+                <td align="right">
+                    <img   class="print-header" src="https://aproitsolutions.com/wp-content/uploads/2019/07/apro-logo-for-web-new-dark-1.png" style=" height: 61px; width: auto; margin: 10px;" align="right">
+
+                </td>
+            </tr>
+        </thead>
+        <!-- End Header -->
+        <tr>
+            <td>
+                
+
+                    <p id="estimateheading">ESTIMATE</p>
+                    <p id="estimatedate">Date: {{date|date:"d-m-Y"}} </p><br />
+                    <p><b id="estimateclientname">Client Name:</b> {{customer}}</p>
+                    <p><b id="estimateclientservicetype">Service Type:</b> {{service_type}} - {{message}}</p>
+                    <p id="estimatebilltitle">{{bill_title}}</p>
+                    <br />
+
+
+
+                <table class="print-content" id="mytable" >
+                    <thead id="newid1">
+                        <tr>
+                            <th><p style="color:white;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "Lucida Grande", sans-serif; ">#</p></th>
+                            <th><p style="color:white;font-family:Helvetica Neue Light;">Description</p></th>
+                            <th><p style="color:white;">Qty</p></th>
+                            <th><p style="color:white;">Rate</p></th>
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                        {% for item in lineitem %}
+                        <tr>
+                            <td><p style="text-align:center;font-weight:bold;">{{forloop.counter}}</p></td>
+
+
+                            <td><p style="text-align:left;font-weight:bold;color:#103050;">{{item.service}}</p><p>{{item.description|linebreaks}}</p></td>
+
+                            <td><p style="text-align:center;">{{item.quantity}}</p></td>
+
+                            <td><p style="text-align:center;font-weight:bold;color:#103050;">₹ {{item.rate}}</p></td>
+
+
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+
+                </table>
+                <!-- End Print Content -->
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3"></td>
+            <td colspan="1"><p class="t" style="font-weight:bold;">Total Without GST</p></td>
+            <td><p class="u" style="font-weight:bold;">₹ {{invoice_total}}</p></td>
+        </tr>
+        <tr>
+            <td colspan="3" id="col3"></td>
+            <td colspan="1" id="totalidname"><p style="font-weight:bold;">GST <span id="myText"></span>%</p></td>
+
+
+            <td id="totalidname"><p style="font-weight:bold;"> ₹ <span id="myText1"></span></p></td>
+        </tr>
+        <tr style="background-color:#f3f5f5;">
+            <td colspan="3"></td>
+            <td colspan="1" id="totalidname"><p id="totalidp" style="font-weight:bold;">Total</p></td>
+            <td id="totalid"><p style="font-weight:bold;"> ₹ <span id="myText2"></span></p></td>
+        </tr>
+
+
+
+
+
+<script>
+function myFunction() {
+
+var invoicetotal = {{invoice_total}};
+var invoicegsta = {{invoice_gst}};
+var gstpercentage = {{invoice_gst}} * 100;
+var xyz = gstpercentage.toFixed(0)
+var fulltotalwithgst = {{invoice_total}} * {{invoice_gst}};
+var naaaa = fulltotalwithgst.toFixed(2);
+var num1 = invoicetotal
+var num2 = naaaa
+var x = +num1 + +num2
+let str = x.toLocaleString("en-US");
+document.getElementById("myText").innerHTML = xyz;
+document.getElementById("myText1").innerHTML = naaaa;
+document.getElementById("myText2").innerHTML = str;
+alert(xyz);
+
+}
+
+</script>
+
+
+        <tfoot>
+
+
+            <tr>
+                <td style="height: 4cm;width:auto;">
+
+
+
+
+                    <!-- Leave this empty and don't remove it. This space is where footer placed on print -->
+                </td>
+            </tr>
+        </tfoot>
+        <!-- End Space For Footer -->
+    </table>
+
+
+    <p style="margin-top:-250px;">{{fulldescription|linebreaks}}</p><br />
+    <p id="printterms1">Terms and Conditions:</p>
+    <p id="printterms2" >{{termsandconditions|linebreaks}}</p><br />
+
+    <!-- Start Footer -->
+    <div class="print-footer">
+        <img src="https://i.ibb.co/Y0105t7/FOOTER-02.png" style="width: auto; margin:10px ">
+
+    </div>
+    <!-- End Footer -->
+
+
+
+
+</body>
+
+</html>

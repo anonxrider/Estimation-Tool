@@ -1,0 +1,252 @@
+{% extends 'invoice/base.html' %}
+{% load static %}
+{% block content %}
+<!--Material Icons Linking Start Section-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Material Icons Linking End Section-->
+<!--CSS Linking Start Section-->
+<link href="{% static 'css/invoicelist.css' %}" rel="stylesheet">
+<!--CSS Linking End Section-->
+<div class="classone" >
+    <br/>
+<!--Logo Start Section-->
+    <object data="http://apropack.com/assets/apro-it.svg" width="300" height="auto"></object>
+<!--Logo End Section-->
+<!--Time or Clock Start Section-->
+     <div class="classone">
+         <span id="clock"></span>
+     </div>
+<!--Time or Clock End Section-->
+<!--Title Start Section-->
+     <p class="classtwo">Tax Based Estimates</p>
+    <br/>
+<!--Title End Section-->
+</div>
+<!--Time or Clock JavaScript Start Section-->
+<script type="text/javascript">
+var clockElement = document.getElementById("clock");
+function clock() {
+    clockElement.textContent = new Date().toString();
+}
+setInterval(clock, 1000);
+</script>
+<!--Time or Clock JavaScript End Section-->
+<form action="{% url 'invoice:invoice-list' %}" method="post">
+    {% csrf_token %}
+    <div class="card">
+<!--HEADER 1 Start Section-->
+        <header class="card-header" style="display:block-ruby;">
+<!--Subheading Start Section-->
+            <p class="card-header-title">
+                Estimate Generator v1
+                <br/>&nbsp;
+                Total Bills : {{total_count}}
+                <br/>
+<!--Subheading End Section-->
+<!--Create New Tax Based Estimate with Div and Button Start Section-->
+                <div class="classfour">
+                    <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                        <a href="{% url 'invoice:invoice-create' %}" class="has-text-white classthree">Create New Tax Based Estimate</a>
+                    </button>
+                </div>
+<!--Create New Tax Based Estimate with Div and Button End Section-->
+<!--View Tax Estimates with Div and Button Start Section-->
+                <div class="classfive">
+                    <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                        <a href="{% url 'invoice:invoice-list' %}" class="has-text-white classthree">View Tax Estimates</a>
+                    </button>
+                </div>
+<!--View Tax Estimates with Div and Button End Section-->
+<!--Logout with Div and Button Start Section-->
+                 <div class="classfive">
+                     <button title="Logout" class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                         <a href="{% url 'invoice:logout' %}" class="has-text-white classthree">Logout</a>
+                     </button>
+                 </div>
+<!--Logout with Div and Button End Section-->
+            </p>
+        </header>
+<!--HEADER 1 End Section-->
+<!--HEADER 2 Start Section-->
+        <header class="card-header" >
+            <p class="card-header-title"></p>
+                <br/>
+<!--Filter by Date (+) with Div and Button Start Section-->
+            <div class="classfive">
+                <button  class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:invoice-list-date-negative' %}" class="has-text-white classthree">Filter by Date (+)</a>
+                </button>
+            </div>
+<!--Filter by Date (+) with Div and Button End Section-->
+<!--Filter by Date (-) with Div and Button Start Section-->
+             <div class="classfive">
+                 <button  class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                 <a href="{% url 'invoice:invoice-list-date-positive' %}" class="has-text-white classthree">Filter by Date (-)</a>
+                 </button>
+             </div>
+<!--Filter by Date (-) with Div and Button End Section-->
+<!--Search with Div and Button Start Section-->
+             <div class="classfive">
+                 <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="#" class="has-text-white classthree">Search</a>
+                </button>
+             </div>
+<!--Search with Div and Button End Section-->
+<!--Admin Panel with Div and Button Start Section-->
+             <div class="classfive">
+                 <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="/admin" class="has-text-white classthree">Admin Panel</a>
+                </button>
+             </div>
+<!--Admin Panel with Div and Button End Section-->
+<!--Export As CSV with Div and Button Start Section-->
+             <div class="classfive">
+                <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:export' %}" class="has-text-white classthree">Export As CSV</a>
+                </button>
+             </div>
+<!--Export As CSV with Div and Button End Section-->
+<!--Export As PDF with Div and Button Start Section-->
+             <div class="classfive">
+                <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">
+                <a href="{% url 'invoice:export' %}" class="has-text-white classthree">Export As PDF</a>
+                </button>
+             </div>
+<!--Export As PDF with Div and Button End Section-->
+        </header>
+<!--HEADER 2 End Section-->
+        <div class="card-content-edited">
+            <div class="content">
+<!--Table Start Section-->
+                <table class="table is-fullwidth is-bordered is-hoverable is-striped" id="myTable">
+<!--Table Body Start Section-->
+                   <tbody>
+<!--Table Head Start Section-->
+                    <thead>
+<!--Table TR Start Section-->
+                        <tr>
+<!--Table TH CheckBox Start Section-->
+                            <th></th>
+<!--Table TH CheckBox End Section-->
+<!--Table TH CUSTOMER ID Start Section-->
+                            <th style="text-align:center;">CUSTOMER ID</th>
+<!--Table TH CUSTOMER ID End Section-->
+<!--Table TH DATE Start Section-->
+                            <th style="text-align:center;">DATE</th>
+<!--Table TH DATE End Section-->
+<!--Table TH CUSTOMER NAME Start Section-->
+                            <th style="text-align:center;">CUSTOMER NAME</th>
+<!--Table TH CUSTOMER NAME End Section-->
+<!--Table TH SERVICE TYPE Start Section-->
+                            <th style="text-align:center;">SERVICE TYPE</th>
+<!--Table TH SERVICE TYPE End Section-->
+<!--Table TH GST (%) Start Section-->
+                            <th style="text-align:center;">GST (%)</th>
+<!--Table TH GST (%) End Section-->
+<!--Table TH TOTAL (excluded GST) Start Section-->
+                            <th style="text-align:center;">TOTAL
+                                <br/>
+                                (excluded GST)
+                            </th>
+<!--Table TH TOTAL (excluded GST) End Section-->
+<!--Table TH TOTAL (included GST) Start Section-->
+                            <th style="text-align:center;">TOTAL
+                                <br/>
+                                (included GST)
+                            </th>
+<!--Table TH TOTAL (included GST) End Section-->
+<!--Table TH View Start Section-->
+                            <th style="text-align:center;">View</th>
+<!--Table TH View End Section-->
+<!--Table TH Edit Start Section-->
+                            <th style="text-align:center;">Edit</th>
+<!--Table TH Edit End Section-->
+<!--Table TH Delete Start Section-->
+                            <th style="text-align:center;color:red;">Delete</th>
+<!--Table TH Delete End Section-->
+<!--Table TH Download Start Section-->
+                            <th style="text-align:center;">Download</th>
+<!--Table TH Download End Section-->
+                        </tr>
+<!--Table TR End Section-->
+                    </thead>
+<!--Table Head End Section-->
+<!--Fetch DATA from DATABASE Start Section-->
+                    {% for invoice1 in invoices1 %}
+                    <tr>
+<!--CHECKBOX-->
+                        <td>
+                            <input class="checkbox" type="checkbox" value="{{invoice1.id}}" name="invoice1_id" size="2" />
+                        </td>
+<!--INVOICE ID-->
+                        <td width="10%" style="text-align:center;vertical-align: middle;">{{invoice1.id}}</td>
+<!--INVOICE DATE-->
+                        <td width="10%" style="text-align:center;vertical-align: middle;">{{invoice1.date}}</td>
+<!--INVOICE NAME-->
+                        <td width="39%" style="text-align:center;vertical-align: middle;">{{invoice1.customer}}</td>
+<!--SERVICE IMAGE-->
+                        <td width="39%" style="text-align:center;vertical-align: middle;">
+                            <img class="service-img" src="{{invoice1.service}}">
+                        </td>
+<!--GST PERCENTAGE-->
+                        <td style="text-align:center;vertical-align: middle;">{{invoice1.gstpercentage}}%</td>
+<!--CURRENCY SYMBOL AND TOTAL AMOUNT-->
+                        <td style="text-align:center;vertical-align: middle;">{{invoice1.currency}}<br>{{invoice1.total_amount}}</td>
+<!--CURRENCY SYMBOL AND SUB TOTAL AMOUNT-->
+                        <td style="text-align:center;vertical-align: middle;">{{invoice1.currency}}<br> {{invoice1.subtotal}}</td>
+<!--INVOICE VIEW Start Section-->
+                        <td width="1%">
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large abc" href="{% url 'invoice:invoice-detail' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                <div style="font-weight:bold;font-size:10px;">
+                                    <i class="material-icons">remove_red_eye</i>
+                                </div>
+                            </a>
+                        </td>
+<!--INVOICE VIEW End Section-->
+<!--INVOICE EDIT Start Section-->
+                        <td width="1%">
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large" href="{% url 'invoice:update' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                <div style="font-weight:bold;font-size:10px;">
+                                    <i class="material-icons">edit</i>
+                                </div>
+                            </a>
+                        </td>
+<!--INVOICE EDIT End Section-->
+<!--INVOICE DELETE Start Section-->
+                         <td width="1%">
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large" href="{% url 'invoice:invoice-delete' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                <div style="font-weight:bold;font-size:10px;color:red;">
+                                    <i class="material-icons">delete_forever</i>
+                                </div>
+                            </a>
+                        </td>
+<!--INVOICE DELETE End Section-->
+<!--INVOICE DOWNLOAD Start Section-->
+                        <td width="1%">
+                            <a class="w3-btn w3-white w3-border w3-border-red w3-round-large" href="{% url 'invoice:invoice-download' id=invoice1.id %}" style="box-shadow: 0 0 3px 3px #0ab6d921;
+border-radius: 73px;">
+                                <div style="font-weight:bold;font-size:10px;">
+                                    <i class="material-icons">file_download</i>
+                                </div>
+                            </a>
+                        </td>
+<!--INVOICE DOWNLOAD End Section-->
+                    </tr>
+                    {% endfor %}
+<!--Fetch DATA from DATABASE End Section-->
+                    </tbody>
+<!--Table Body End Section-->
+                </table>
+<!--Table End Section-->
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+</form>
+
+{% endblock content %}
