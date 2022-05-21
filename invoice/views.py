@@ -27,6 +27,7 @@ ALLOWED_ATTRIBUTES = {}
 
 # LOGOUT SECTION AND REDIRECT REQUEST
 # ADMIN LOGIN LINK /ADMIN/LOGIN/?NEXT=/ADMIN/
+
 def logout(request):
     logging.warning("Logout Requested")
     auth_logout(request)
