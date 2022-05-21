@@ -3435,3 +3435,177 @@ File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages
 File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1652871882.7910442
 File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\db\models\sql\compiler.py first seen with mtime 1652871884.1504192
 File C:\Users\OP PC 03\Documents\GitHub\Estimation-Tool\invoice\migrations\0001_initial.py first seen with mtime 1652952033.5824041
+"GET / HTTP/1.1" 302 0
+Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000024C80B60C10>>, 'request': <WSGIRequest: GET '/admin/login/?next=/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C80B94DC0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C80B94DC0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/admin/login/?next=/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x0000024C80B95150>, 'site_title': 'APRO Admin Portal', 'site_header': 'APRO IT Solutions', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'Log in', 'app_path': '/admin/login/?next=/', 'username': '', 'next': '/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0000024C80B95720>, 'site_name': '127.0.0.1:8585', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<IfNode>, <Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000024C80B60C10>>, 'request': <WSGIRequest: GET '/admin/login/?next=/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C80B94DC0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C80B94DC0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/admin/login/?next=/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x0000024C80B95150>, 'site_title': 'APRO Admin Portal', 'site_header': 'APRO IT Solutions', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'Log in', 'app_path': '/admin/login/?next=/', 'username': '', 'next': '/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0000024C80B95720>, 'site_name': '127.0.0.1:8585', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_subtitle. Contents: [<IfNode>]>}]
+"GET /admin/login/?next=/ HTTP/1.1" 200 2199
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\tzdata\__init__.py first seen with mtime 1646728965.9776332
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1652871883.4785447
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\sites\requests.py first seen with mtime 1652871883.884797
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\importlib\readers.py first seen with mtime 1648057904.0
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1652871883.4785447
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1652871883.4785447
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\importlib\_adapters.py first seen with mtime 1648057904.0
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\admin\forms.py first seen with mtime 1652871882.1035447
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\messages\utils.py first seen with mtime 1652871883.4785447
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\template\context_processors.py first seen with mtime 1652871884.2285435
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1652871882.6504195
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\importlib\_common.py first seen with mtime 1648057904.0
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\conf\locale\en\__init__.py first seen with mtime 1652871881.9004207
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\staticfiles\storage.py first seen with mtime 1652871884.0254192
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1652871883.4785447
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\conf\locale\en\formats.py first seen with mtime 1652871881.9004207
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1652871883.7441695
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\importlib\abc.py first seen with mtime 1648057904.0
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\tzdata\zoneinfo\__init__.py first seen with mtime 1646728965.9995747
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\importlib\resources.py first seen with mtime 1648057904.0
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\django\contrib\messages\storage\base.py first seen with mtime 1652871883.4785447
+(0.000) SELECT SUM("axes_accessattempt"."failures_since_start") AS "failures_since_start__sum" FROM "axes_accessattempt" WHERE ("axes_accessattempt"."ip_address" = '127.0.0.1' AND "axes_accessattempt"."attempt_time" >= '2022-05-21 07:02:21.354161'); args=('127.0.0.1', '2022-05-21 07:02:21.354161'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'aproit' LIMIT 21; args=('aproit',); alias=default
+(0.000) SELECT "axes_accessattempt"."id", "axes_accessattempt"."user_agent", "axes_accessattempt"."ip_address", "axes_accessattempt"."username", "axes_accessattempt"."http_accept", "axes_accessattempt"."path_info", "axes_accessattempt"."attempt_time", "axes_accessattempt"."get_data", "axes_accessattempt"."post_data", "axes_accessattempt"."failures_since_start" FROM "axes_accessattempt" WHERE "axes_accessattempt"."attempt_time" < '2022-05-21 07:02:21.354161'; args=('2022-05-21 07:02:21.354161',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) SELECT "axes_accessattempt"."id", "axes_accessattempt"."user_agent", "axes_accessattempt"."ip_address", "axes_accessattempt"."username", "axes_accessattempt"."http_accept", "axes_accessattempt"."path_info", "axes_accessattempt"."attempt_time", "axes_accessattempt"."get_data", "axes_accessattempt"."post_data", "axes_accessattempt"."failures_since_start" FROM "axes_accessattempt" WHERE ("axes_accessattempt"."ip_address" = '127.0.0.1' AND "axes_accessattempt"."user_agent" = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36' AND "axes_accessattempt"."username" = 'aproit') LIMIT 21; args=('127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'aproit'); alias=default
+(0.000) SAVEPOINT "s5144_x1"; args=None; alias=default
+(0.000) INSERT INTO "axes_accessattempt" ("user_agent", "ip_address", "username", "http_accept", "path_info", "attempt_time", "get_data", "post_data", "failures_since_start") SELECT 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', '127.0.0.1', 'aproit', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', '/admin/login/', '2022-05-21 07:14:21.534255', 'next=/', 'csrfmiddlewaretoken=E5I1SYhIXDmyq3lV5RAoXQjnkL64RCmS8yXkXHPcjEmYrjdHOirEZnigENiC4tcj
+username=aproit
+password=********************
+next=/', 1 RETURNING "axes_accessattempt"."id"; args=('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', '127.0.0.1', 'aproit', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', '/admin/login/', '2022-05-21 07:14:21.534255', 'next=/', 'csrfmiddlewaretoken=E5I1SYhIXDmyq3lV5RAoXQjnkL64RCmS8yXkXHPcjEmYrjdHOirEZnigENiC4tcj\nusername=aproit\npassword=********************\nnext=/', 1); alias=default
+(0.000) RELEASE SAVEPOINT "s5144_x1"; args=None; alias=default
+(0.000) SELECT SUM("axes_accessattempt"."failures_since_start") AS "failures_since_start__sum" FROM "axes_accessattempt" WHERE ("axes_accessattempt"."ip_address" = '127.0.0.1' AND "axes_accessattempt"."attempt_time" >= '2022-05-21 07:02:21.354161'); args=('127.0.0.1', '2022-05-21 07:02:21.354161'); alias=default
+Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000024C80A58550>>, 'request': <WSGIRequest: POST '/admin/login/?next=/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C808832B0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C808832B0>>), 'messages': <FallbackStorage: request=<WSGIRequest: POST '/admin/login/?next=/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x0000024C80881660>, 'site_title': 'APRO Admin Portal', 'site_header': 'APRO IT Solutions', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'Log in', 'app_path': '/admin/login/?next=/', 'username': '', 'next': '/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0000024C80BE8B20>, 'site_name': '127.0.0.1:8585', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<IfNode>, <Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000024C80A58550>>, 'request': <WSGIRequest: POST '/admin/login/?next=/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C808832B0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000024C808832B0>>), 'messages': <FallbackStorage: request=<WSGIRequest: POST '/admin/login/?next=/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x0000024C80881660>, 'site_title': 'APRO Admin Portal', 'site_header': 'APRO IT Solutions', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'Log in', 'app_path': '/admin/login/?next=/', 'username': '', 'next': '/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0000024C80BE8B20>, 'site_name': '127.0.0.1:8585', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_subtitle. Contents: [<IfNode>]>}]
+"POST /admin/login/?next=/ HTTP/1.1" 200 2361
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\axes\handlers\database.py first seen with mtime 1652871974.968766
+File C:\Users\OP PC 03\AppData\Local\Programs\Python\Python310\Lib\site-packages\axes\attempts.py first seen with mtime 1652871974.968766
+(0.000) SELECT SUM("axes_accessattempt"."failures_since_start") AS "failures_since_start__sum" FROM "axes_accessattempt" WHERE ("axes_accessattempt"."ip_address" = '127.0.0.1' AND "axes_accessattempt"."attempt_time" >= '2022-05-21 07:02:25.826304'); args=('127.0.0.1', '2022-05-21 07:02:25.826304'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'aproit' LIMIT 21; args=('aproit',); alias=default
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl' LIMIT 1; args=('f1d6ykwgccg8q2xy2bhh3bagoycpixpl',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl', 'e30:1nsJJi:hgnoTE-6Ekr1CJPE75baSEUiVjLyHbraf1FP1UjpA3w', '2022-05-21 07:19:26.007302'; args=('f1d6ykwgccg8q2xy2bhh3bagoycpixpl', 'e30:1nsJJi:hgnoTE-6Ekr1CJPE75baSEUiVjLyHbraf1FP1UjpA3w', '2022-05-21 07:19:26.007302'); alias=default
+(0.000) UPDATE "auth_user" SET "last_login" = '2022-05-21 07:14:26.017300' WHERE "auth_user"."id" = 4; args=('2022-05-21 07:14:26.017300', 4); alias=default
+(0.000) SELECT "axes_accessattempt"."id", "axes_accessattempt"."user_agent", "axes_accessattempt"."ip_address", "axes_accessattempt"."username", "axes_accessattempt"."http_accept", "axes_accessattempt"."path_info", "axes_accessattempt"."attempt_time", "axes_accessattempt"."get_data", "axes_accessattempt"."post_data", "axes_accessattempt"."failures_since_start" FROM "axes_accessattempt" WHERE "axes_accessattempt"."attempt_time" < '2022-05-21 07:02:25.826304'; args=('2022-05-21 07:02:25.826304',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "axes_accesslog" ("user_agent", "ip_address", "username", "http_accept", "path_info", "attempt_time", "logout_time") SELECT 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', '127.0.0.1', 'aproit', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', '/admin/login/', '2022-05-21 07:14:26.027304', NULL RETURNING "axes_accesslog"."id"; args=('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', '127.0.0.1', 'aproit', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', '/admin/login/', '2022-05-21 07:14:26.027304', None); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) UPDATE "django_session" SET "session_data" = '.eJxVjEsOwiAUAO_C2hAe5evSfc9AeDyQqqFJaVfGuxuSLnQ7M5k3C_HYazh63sJC7MoUu_wyjOmZ2xD0iO2-8rS2fVuQj4SftvN5pfy6ne3foMZex1YJIOmi19a6SNaSl0UCiqKLkZPXgFZj1hIEKgvFgHIqESksSRua2OcLwMc3SA:1nsJJi:L1apYlOPt10FEHa-BTKEeTKDwS_DSVHrdmt8th2QY2Q', "expire_date" = '2022-05-21 07:19:26.036303' WHERE "django_session"."session_key" = 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'; args=('.eJxVjEsOwiAUAO_C2hAe5evSfc9AeDyQqqFJaVfGuxuSLnQ7M5k3C_HYazh63sJC7MoUu_wyjOmZ2xD0iO2-8rS2fVuQj4SftvN5pfy6ne3foMZex1YJIOmi19a6SNaSl0UCiqKLkZPXgFZj1hIEKgvFgHIqESksSRua2OcLwMc3SA:1nsJJi:L1apYlOPt10FEHa-BTKEeTKDwS_DSVHrdmt8th2QY2Q', '2022-05-21 07:19:26.036303', 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) UPDATE "django_session" SET "session_data" = '.eJxVjEsOwiAUAO_C2hAe5evSfc9AeDyQqqFJaVfGuxuSLnQ7M5k3C_HYazh63sJC7MoUu_wyjOmZ2xD0iO2-8rS2fVuQj4SftvN5pfy6ne3foMZex1YJIOmi19a6SNaSl0UCiqKLkZPXgFZj1hIEKgvFgHIqESksSRua2OcLwMc3SA:1nsJJi:L1apYlOPt10FEHa-BTKEeTKDwS_DSVHrdmt8th2QY2Q', "expire_date" = '2022-05-21 07:19:26.044299' WHERE "django_session"."session_key" = 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'; args=('.eJxVjEsOwiAUAO_C2hAe5evSfc9AeDyQqqFJaVfGuxuSLnQ7M5k3C_HYazh63sJC7MoUu_wyjOmZ2xD0iO2-8rS2fVuQj4SftvN5pfy6ne3foMZex1YJIOmi19a6SNaSl0UCiqKLkZPXgFZj1hIEKgvFgHIqESksSRua2OcLwMc3SA:1nsJJi:L1apYlOPt10FEHa-BTKEeTKDwS_DSVHrdmt8th2QY2Q', '2022-05-21 07:19:26.044299', 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'); alias=default
+"POST /admin/login/?next=/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2022-05-21 07:14:26.055302' AND "django_session"."session_key" = 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl') LIMIT 21; args=('2022-05-21 07:14:26.055302', 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "invoice_invoice1"; args=(); alias=default
+(0.000) SELECT "invoice_invoice1"."id", "invoice_invoice1"."customer", "invoice_invoice1"."bill_titlefront", "invoice_invoice1"."bill_titleback", "invoice_invoice1"."bill_title", "invoice_invoice1"."termsandconditions", "invoice_invoice1"."fulldescription", "invoice_invoice1"."date", "invoice_invoice1"."service_type", "invoice_invoice1"."total_amount", "invoice_invoice1"."service", "invoice_invoice1"."gst", "invoice_invoice1"."gsttotal", "invoice_invoice1"."subtotal", "invoice_invoice1"."gstpercentage", "invoice_invoice1"."status", "invoice_invoice1"."currency", "invoice_invoice1"."footer" FROM "invoice_invoice1" ORDER BY "invoice_invoice1"."id" DESC; args=(); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) UPDATE "django_session" SET "session_data" = '.eJxVjrtywyAQRf-FNjazu7wkle7duWdAIItEFolAVSb_HjGjImnv48z5ZtbtdbZ7iZtNgQ1MssvfzLvxI66tCO9ufWY-5rVuyfM24Wdb-D2HuNzO7T_A7MrcsBIwUOd6ZUzngjGhp4nQw6QmTaJX6I3yURGClwYnjbKTYwjST6PSQTRoiaWkvNq0pmpresVS3evTsgG1EoiGtOaglACSl1O3iWS75Gfeq11cqXaLX_txPJQIiK6groQPMAPKgY67RgHiDWAAYD-_EZFZ4g:1nsJJk:W83Lv1pHXqQppFDEOheHhaKhO80rEUYUjBi6duipa2M', "expire_date" = '2022-05-21 07:19:28.795990' WHERE "django_session"."session_key" = 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'; args=('.eJxVjrtywyAQRf-FNjazu7wkle7duWdAIItEFolAVSb_HjGjImnv48z5ZtbtdbZ7iZtNgQ1MssvfzLvxI66tCO9ufWY-5rVuyfM24Wdb-D2HuNzO7T_A7MrcsBIwUOd6ZUzngjGhp4nQw6QmTaJX6I3yURGClwYnjbKTYwjST6PSQTRoiaWkvNq0pmpresVS3evTsgG1EoiGtOaglACSl1O3iWS75Gfeq11cqXaLX_txPJQIiK6groQPMAPKgY67RgHiDWAAYD-_EZFZ4g:1nsJJk:W83Lv1pHXqQppFDEOheHhaKhO80rEUYUjBi6duipa2M', '2022-05-21 07:19:28.795990', 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) UPDATE "django_session" SET "session_data" = '.eJxVjrtywyAQRf-FNjazu7wkle7duWdAIItEFolAVSb_HjGjImnv48z5ZtbtdbZ7iZtNgQ1MssvfzLvxI66tCO9ufWY-5rVuyfM24Wdb-D2HuNzO7T_A7MrcsBIwUOd6ZUzngjGhp4nQw6QmTaJX6I3yURGClwYnjbKTYwjST6PSQTRoiaWkvNq0pmpresVS3evTsgG1EoiGtOaglACSl1O3iWS75Gfeq11cqXaLX_txPJQIiK6groQPMAPKgY67RgHiDWAAYD-_EZFZ4g:1nsJJk:W83Lv1pHXqQppFDEOheHhaKhO80rEUYUjBi6duipa2M', "expire_date" = '2022-05-21 07:19:28.802991' WHERE "django_session"."session_key" = 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'; args=('.eJxVjrtywyAQRf-FNjazu7wkle7duWdAIItEFolAVSb_HjGjImnv48z5ZtbtdbZ7iZtNgQ1MssvfzLvxI66tCO9ufWY-5rVuyfM24Wdb-D2HuNzO7T_A7MrcsBIwUOd6ZUzngjGhp4nQw6QmTaJX6I3yURGClwYnjbKTYwjST6PSQTRoiaWkvNq0pmpresVS3evTsgG1EoiGtOaglACSl1O3iWS75Gfeq11cqXaLX_txPJQIiK6groQPMAPKgY67RgHiDWAAYD-_EZFZ4g:1nsJJk:W83Lv1pHXqQppFDEOheHhaKhO80rEUYUjBi6duipa2M', '2022-05-21 07:19:28.802991', 'f1d6ykwgccg8q2xy2bhh3bagoycpixpl'); alias=default
+"GET / HTTP/1.1" 200 21902670
