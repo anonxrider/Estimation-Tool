@@ -33,11 +33,6 @@ def logout(request):
     logging.warning("Successfully Logged Out and Redirect to Admin Login")
     return redirect("/admin/login/?next=/admin/")
 
-
-
-
-
-
 # INVOICE TYPE 2 NO TAX CUSTOMERS
 class InvoiceListView2(View):
     def get(self, *args, **kwargs):
@@ -174,7 +169,6 @@ def createInvoice1(request):
     elif request.method == "POST":
         formset = LineItemFormset1(request.POST)
         form = InvoiceForm1(request.POST)
-
         gstpercentageinfloat = form.data["gst"]
         a = float(gstpercentageinfloat) * 100
         b = int(a)
